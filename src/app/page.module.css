@@ -14,6 +14,20 @@
   pointer-events: none;
 }
 
+.heroBgImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(15, 23, 34, 0.92) 0%,
+      rgba(15, 23, 34, 0.75) 50%,
+      rgba(15, 23, 34, 0.6) 100%);
+}
+
 .heroGlow1 {
   position: absolute;
   top: -20%;
@@ -21,16 +35,6 @@
   width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(130, 255, 31, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.heroGlow2 {
-  position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(130, 255, 31, 0.05) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -63,41 +67,93 @@
   flex-wrap: wrap;
 }
 
-/* ═══ PROGRAMS FEATURED ═══ */
+/* ═══ FEATURED PROGRAMS (Editorial Cards) ═══ */
 .featuredGrid {
-  margin-bottom: 40px;
-}
-
-.programCard {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.featuredCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
   text-decoration: none;
+  transition: var(--transition);
   cursor: pointer;
+  min-height: 340px;
 }
 
-.programEmoji {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+.featuredCard:hover {
+  border-color: rgba(130, 255, 31, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.programCard .tag {
-  margin-bottom: 8px;
+.featuredReverse {
+  direction: rtl;
 }
 
-.programTitle {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.featuredReverse>* {
+  direction: ltr;
+}
+
+.featuredImg {
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featuredCard:hover .featuredPhoto {
+  transform: scale(1.05);
+}
+
+.featuredText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 36px;
+  gap: 12px;
+}
+
+.featuredText .tag {
+  align-self: flex-start;
+}
+
+.featuredTitle {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   color: var(--text-primary);
+  line-height: 1.25;
 }
 
-.programDesc {
+.featuredHighlight {
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 500;
+  max-width: none;
+}
+
+.featuredDesc {
   font-size: 0.95rem;
-  flex: 1;
-  margin-bottom: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: none;
 }
 
-.cardLink {
-  margin-top: auto;
+.featuredText .btn {
+  align-self: flex-start;
+  margin-top: 4px;
+  width: auto;
 }
 
 .sectionCta {
@@ -208,9 +264,26 @@
   font-size: 0.95rem;
 }
 
+/* ═══ RESPONSIVE ═══ */
 @media (max-width: 768px) {
   .heroCtas {
     flex-direction: column;
+  }
+
+  .featuredCard {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredReverse {
+    direction: ltr;
+  }
+
+  .featuredImg {
+    height: 220px;
+  }
+
+  .featuredText {
+    padding: 28px 24px;
   }
 
   .testimonialGrid {

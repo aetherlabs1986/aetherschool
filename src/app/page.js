@@ -1,9 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { programs } from "@/data/programs";
 import Newsletter from "@/components/Newsletter";
 import styles from "./page.module.css";
 
-const featured = programs.slice(0, 3);
+const featured = [
+  { ...programs[0], image: "/img-mujeres.png", highlight: "Para mujeres que quieren sacarle partido a la tecnología" },
+  { ...programs[1], image: "/img-mayores.png", highlight: "Para personas mayores que quieren estar al día" },
+  { ...programs[3], image: "/img-jovenes.png", highlight: "Para jóvenes de 13 a 18 años" },
+];
 
 export default function Home() {
   return (
@@ -11,8 +16,15 @@ export default function Home() {
       {/* ═══ HERO ═══ */}
       <section className={styles.hero}>
         <div className={styles.heroBg} aria-hidden="true">
+          <Image
+            src="/img-hero.png"
+            alt=""
+            fill
+            className={styles.heroBgImg}
+            priority
+          />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroGlow1} />
-          <div className={styles.heroGlow2} />
         </div>
         <div className={`container ${styles.heroContent}`}>
           <h1 className={styles.heroTitle}>
@@ -41,20 +53,29 @@ export default function Home() {
           <div className="section-header">
             <h2>¿Para quién es Aether School?</h2>
           </div>
-          <div className={`grid-3 ${styles.featuredGrid}`}>
-            {featured.map((p) => (
+          <div className={styles.featuredGrid}>
+            {featured.map((p, i) => (
               <Link
                 key={p.slug}
                 href={`/programa/${p.slug}`}
-                className={`card ${styles.programCard}`}
+                className={`${styles.featuredCard} ${i % 2 !== 0 ? styles.featuredReverse : ""}`}
               >
-                <span className={styles.programEmoji}>{p.emoji}</span>
-                <span className="tag">{p.audienceTag}</span>
-                <h3 className={styles.programTitle}>{p.title}</h3>
-                <p className={styles.programDesc}>{p.shortDesc}</p>
-                <span className={`btn btn-link ${styles.cardLink}`}>
-                  Saber más →
-                </span>
+                <div className={styles.featuredImg}>
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    width={520}
+                    height={380}
+                    className={styles.featuredPhoto}
+                  />
+                </div>
+                <div className={styles.featuredText}>
+                  <span className="tag">{p.audienceTag}</span>
+                  <h3 className={styles.featuredTitle}>{p.title}</h3>
+                  <p className={styles.featuredHighlight}>{p.highlight}</p>
+                  <p className={styles.featuredDesc}>{p.shortDesc}</p>
+                  <span className="btn btn-primary">Saber más →</span>
+                </div>
               </Link>
             ))}
           </div>

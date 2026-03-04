@@ -1,0 +1,154 @@
+.hero {
+    padding: 160px 0 80px;
+    background: var(--bg-secondary);
+}
+
+.hero .tag {
+    margin-bottom: 16px;
+}
+
+.heroTitle {
+    margin: 16px 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.heroDesc {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.sectionTitle {
+    margin-bottom: 36px;
+}
+
+/* ═══ LEARN LIST ═══ */
+.learnList {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.learnItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.checkIcon {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ═══ FOR WHO ═══ */
+.forWhoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.forWhoCard {
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.forWhoIcon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.forWhoCard p {
+    font-size: 0.95rem;
+    margin: 0 auto;
+}
+
+/* ═══ STEPS ═══ */
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.step {
+    padding: 20px;
+}
+
+.stepNum {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 16px;
+    font-family: var(--font-sans);
+}
+
+.step h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    margin: 0 auto;
+}
+
+/* ═══ CTA FORM ═══ */
+.ctaBlock {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ctaBlock h2 {
+    margin-bottom: 12px;
+}
+
+.ctaDesc {
+    font-size: 1.05rem;
+    margin: 0 auto 32px;
+}
+
+.form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form .btn {
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .forWhoGrid,
+    .stepsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}

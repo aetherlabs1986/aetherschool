@@ -1,0 +1,57 @@
+.hero {
+    padding: 160px 0 60px;
+    background: var(--bg-primary);
+}
+
+.hero h1 {
+    margin-bottom: 12px;
+}
+
+.heroSub {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+.programGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.programCard {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 36px;
+}
+
+.cardTop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.cardEmoji {
+    font-size: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.cardDesc {
+    font-size: 0.95rem;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .programGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,433 @@
+PROMPT COMPLETO PARA ANTIGRAVITY
+Construcción de la web de Aether School
+Documento de referencia completo · Víctor Torres · Aether Labs
+
+INSTRUCCIÓN GENERAL
+Eres Antigravity, el mejor desarrollador web del mundo. Tu misión es construir la web completa de Aether School, la escuela de inteligencia artificial aplicada del ecosistema Aether Labs.
+
+Antes de escribir una sola línea de código, entra en aetherlabs.es y analiza la web a fondo: colores, tipografías, espaciados, componentes, tono visual. Aether School debe sentirse como la hermana de Aether Labs. Mismo ADN visual, misma seriedad, pero con una energía más cercana y humana, porque el público no siempre es empresa. A veces es una señora de 65 años, un niño de 10, o un cocinero de un bar.
+
+El reto principal: que la web sea brutalmente fácil de entender. Nada de párrafos largos. Nada de tecnicismos. La información clave, bien jerarquizada, con un CTA claro en cada sección. Si alguien que nunca ha tocado un ordenador entra y en 15 segundos entiende qué es Aether School y si es para él, has ganado.
+
+1. IDENTIDAD VISUAL
+Referencia base
+Entra en aetherlabs.es y extrae exactamente:
+Color de fondo principal (aprox. #0F1722)
+Color de acento verde neón (aprox. #82FF1F)
+Tipografías usadas (Inter + Playfair Display)
+Estilo de botones, bordes y espaciados
+Cómo se comportan los bloques y secciones
+
+Adaptación para Aether School
+Misma base oscura y acento verde. Pero añade estas variaciones:
+Más blanco y espacio en secciones de programa — necesita respirar más para audiencias no digitales
+Cards de programa grandes, con jerarquía visual muy clara: título grande, descripción corta, CTA visible
+Iconografía simple y reconocible, nada abstracto
+Botones grandes y con buen contraste — accesibilidad es prioritaria
+En móvil, las fuentes deben ser grandes. Muchos usuarios serán mayores
+
+Lo que NO se hace
+Sin animaciones que distraigan
+Sin jerga de startup: nada de 'disruptivo', 'ecosistema', 'sinergia'
+Sin párrafos de más de 3 líneas
+Sin secciones decorativas que no aporten información
+
+2. VOZ Y TONO — CÓMO HABLA AETHER SCHOOL
+Aether School habla como un amigo que sabe mucho y te lo explica fácil. No como una academia, no como un gurú, no como una empresa corporativa.
+
+✅ Así SÍ
+Frases cortas. Una idea por frase.
+Beneficio concreto, no promesas vacías
+Cercano, directo, sin condescendencia
+'Te enseñamos a usarla' — no 'te capacitamos para la adopción digital'
+'Sin saber de tecnología' — no 'sin conocimientos previos en entornos digitales'
+❌ Así NO
+'Transformación digital integral'
+'Potencia tus capacidades con IA generativa'
+'Ecosistema formativo disruptivo'
+Párrafos largos explicando la misión
+Lenguaje técnico en páginas de programa
+
+Ejemplos de copy correcto
+"La tecnología más avanzada del mundo, explicada para ti."
+"Sin necesitar saber de tecnología. Sin complicaciones. Solo resultados."
+"Llevamos la IA a donde tú estás."
+
+3. ESTRUCTURA COMPLETA DE LA WEB
+La web tiene las siguientes páginas. Todas dentro del mismo dominio de Aether School (a definir, posiblemente aetherschool.es o school.aetherlabs.es).
+
+Páginas a construir
+/ — Página de inicio (Home)
+/programas — Catálogo de todos los programas
+/programa/[nombre] — Página individual de cada programa (9 páginas)
+/instituciones — Página para fundaciones, ayuntamientos, colegios
+/sobre-nosotros — Quiénes somos
+/contacto — Formulario de contacto
+
+4. PÁGINA DE INICIO — HOME (/)
+La Home tiene que conseguir tres cosas en 15 segundos: que entiendan qué es Aether School, que vean que hay algo para ellos, y que quieran saber más.
+
+SECCIÓN 1 — HERO
+ESTRUCTURA
+Fondo oscuro. Logo Aether School arriba izquierda. Menú simple arriba derecha (Programas / Instituciones / Contacto).
+
+TITULAR PRINCIPAL
+La IA que siempre creíste que no era para ti.
+SUBTÍTULO
+Formación práctica en inteligencia artificial para personas reales. Sin tecnicismos. Sin complicaciones. Con resultados desde el primer día.
+CTA PRINCIPAL
+Botón grande: 'Ver programas' → lleva a /programas
+CTA SECUNDARIO
+Texto link: 'Soy una institución o empresa' → lleva a /instituciones
+NOTA DE DISEÑO
+Visual de fondo: imagen o vídeo corto que transmita calidez humana + tecnología. Nada de robots. Una persona mayor sonriendo con un tablet, o manos cocinando mientras miran recetas en IA. Algo real.
+
+SECCIÓN 2 — PARA QUIÉN ES
+TÍTULO DE SECCIÓN
+¿Para quién es Aether School?
+DISEÑO
+Grid de cards horizontales. 3 columnas en desktop, 1 en móvil. Cada card tiene: icono grande, título del programa, descripción de 1 línea, botón 'Saber más'.
+MOSTRAR SOLO LOS 3 PRIMEROS PROGRAMAS DESTACADOS
+Empodérate con IA — Para mujeres que quieren sacarle partido a la tecnología
+Conéctate con el mundo — Para personas mayores que quieren estar al día
+Descubre quién quieres ser y cómo llegar — Para jóvenes de 13 a 18 años
+CTA AL FINAL DE LA SECCIÓN
+Botón: 'Ver todos los programas' → /programas
+
+SECCIÓN 3 — POR QUÉ AETHER SCHOOL
+TÍTULO
+No somos otra academia de IA
+3 BLOQUES CON ICONO + TEXTO
+Para ti, no para todos. Cada programa está diseñado para una persona concreta. Tú no eres un 'usuario genérico'.
+Nada de teoría. Todo práctico. Sales con algo hecho, no con apuntes. Desde el primer taller.
+Lo llevamos a donde estás. Colaboramos con instituciones, fundaciones y centros para que la formación llegue a ti.
+
+SECCIÓN 4 — PARA INSTITUCIONES
+FONDO CLARO (BLOQUE DIFERENCIADO)
+TÍTULO
+¿Tienes una fundación, asociación o centro educativo?
+DESCRIPCIÓN CORTA
+Diseñamos talleres y programas a medida para tu colectivo. Llevamos la formación nosotros. Tú solo nos dices quiénes son y qué necesitan.
+CTA
+Botón: 'Hablar con nosotros' → /instituciones
+
+SECCIÓN 5 — FOOTER
+Logo Aether School + 'by Aether Labs'
+Links: Programas / Instituciones / Contacto / aetherlabs.es
+Email de contacto
+RRSS si las hay
+
+5. PÁGINA DE PROGRAMAS (/programas)
+Catálogo completo. Diseño limpio. Una card por programa, bien espaciadas. El usuario debe poder escanear en 10 segundos si hay algo para él.
+
+SECCIÓN 1 — HERO SIMPLE
+Título: 'Todos nuestros programas'
+Subtítulo: 'Elige el que es para ti. Si no estás seguro, escríbenos.'
+
+SECCIÓN 2 — GRID DE PROGRAMAS
+DISEÑO
+2 columnas en desktop, 1 en móvil. Cada card grande con: icono/imagen, tag de audiencia en verde pequeño, título del programa en grande, descripción de 2 líneas, botón 'Ver programa'.
+
+👩
+MUJERES 40-60
+Empodérate con IA
+
+👴
+PERSONAS MAYORES 65+
+Conéctate con el mundo
+
+🧒
+NIÑOS 6-12
+Aprende a crear lo que imaginas
+
+🧑
+JÓVENES 13-18
+Descubre quién quieres ser y cómo llegar
+
+🚀
+EMPRENDEDORES
+Monta tu negocio tú solo, sin saber de tecnología
+
+📚
+PROFESORES
+Mejora tu material educativo con IA
+
+🍽️
+HOSTELERÍA
+Más tiempo para tu cocina, menos para todo lo demás
+
+🩺
+MÉDICOS Y SANIDAD
+Dedícate a lo que importa, la medicina
+
+🏢
+EMPRESAS
+Prepara tu equipo para trabajar diferente
+
+
+6. PÁGINAS INDIVIDUALES DE PROGRAMA
+Cada programa tiene su propia página con esta estructura exacta. El copy cambia, el diseño es el mismo template replicado 9 veces.
+
+Template de página de programa
+
+BLOQUE 1 — HERO DEL PROGRAMA
+Tag de audiencia en verde pequeño arriba: ej. 'Para mujeres de 40 a 60 años'
+Título grande: el nombre del programa
+1 frase de beneficio debajo
+CTA: 'Quiero apuntarme' o 'Contactar' → al formulario
+Imagen lateral o de fondo: real, humana, sin stock genérico
+
+BLOQUE 2 — QUÉ VAS A APRENDER
+Título: '¿Qué vas a aprender?'
+Lista de 4 a 6 puntos concretos. Ej: 'Cómo crear una postal personalizada con IA', 'Cómo buscar información médica de forma fiable', etc.
+Sin tecnicismos. Si nombras una herramienta, explícala en una palabra.
+
+BLOQUE 3 — PARA QUIÉN ES
+Título: '¿Es para mí?'
+3 bullets cortos describiendo al perfil. Ej: 'No tienes experiencia con tecnología', 'Quieres aprender a tu ritmo', 'Te interesa sacarle partido a tu día a día'
+
+BLOQUE 4 — CÓMO FUNCIONA
+Título: '¿Cómo funciona?'
+3 pasos simples con icono: 1. Nos contactas / 2. Diseñamos el taller para vosotros / 3. Empezamos
+Nota: Si es en formato taller presencial o si se puede online, aclararlo aquí
+
+BLOQUE 5 — CTA FINAL
+Título: '¿Te interesa?'
+Texto corto: 'Escríbenos y te contamos todo. Sin compromiso.'
+Formulario simple: Nombre / Email / Teléfono / Mensaje opcional / Botón 'Enviar'
+
+7. CONTENIDO ESPECÍFICO DE CADA PROGRAMA
+Para que Antigravity tenga el copy completo de cada programa sin inventar nada.
+
+PROGRAMA 1 — Empodérate con IA
+AUDIENCIA
+Mujeres de 40 a 60 años
+DESCRIPCIÓN CORTA (PARA LA CARD)
+Usa la inteligencia artificial para lo que más te importa. Salud, creatividad, recuerdos, comunicación. Sin necesitar saber nada de tecnología.
+QUÉ VAS A APRENDER
+Crear diseños, postales e invitaciones personalizadas con IA
+Generar menús semanales adaptados a tu salud y gustos
+Hacer fotos y vídeos creativos de ti misma con IA
+Buscar información de salud de forma fiable
+Organizar tu agenda y tareas con ayuda de la IA
+PARA QUIÉN ES
+No tienes experiencia con tecnología, o tienes poca
+Quieres aprender de forma práctica y a tu ritmo
+Te gustaría estar más al día sin agobiarte
+
+PROGRAMA 2 — Conéctate con el mundo
+AUDIENCIA
+Personas mayores de 65 años
+DESCRIPCIÓN CORTA
+La inteligencia artificial puede ayudarte a estar más cerca de tu familia, a sentirte acompañada y a vivir mejor el día a día.
+QUÉ VAS A APRENDER
+Hablar con la IA como si fuera una persona: hacerle preguntas, pedir ayuda
+Comunicarte mejor con tu familia a través del móvil
+Escuchar noticias y contenido adaptado a tus intereses
+Crear recuerdos: álbumes, mensajes, cartas personalizadas
+Entender cómo funciona la IA sin miedo
+PARA QUIÉN ES
+Personas mayores que quieren estar conectadas
+Si usas el móvil poco o nada, no pasa nada, empezamos desde cero
+Si quieres sentirte menos sola o menos perdida con la tecnología
+
+PROGRAMA 3 — Aprende a crear lo que imaginas
+AUDIENCIA
+Niños de 6 a 12 años
+DESCRIPCIÓN CORTA
+Los niños tienen ideas increíbles. La IA les da las herramientas para hacerlas realidad: cuentos, personajes, música, mundos inventados.
+QUÉ VAN A APRENDER
+Crear cuentos ilustrados con sus propias ideas
+Inventar personajes y diseñarlos con IA
+Hacer música con inteligencia artificial
+Crear pequeños juegos y mundos inventados
+Aprender que la tecnología es una herramienta creativa, no solo de consumo
+PARA QUIÉN ES
+Niños de 6 a 12 años con curiosidad y ganas de crear
+No hace falta que sepan nada de tecnología
+Los talleres son dinámicos, divertidos y con resultados que se llevan a casa
+
+PROGRAMA 4 — Descubre quién quieres ser y cómo llegar
+AUDIENCIA
+Jóvenes de 13 a 18 años
+DESCRIPCIÓN CORTA
+El sistema educativo no te enseña las profesiones del futuro. Nosotros sí. Descubre qué se te da bien, qué salidas tiene, y cómo la IA puede llevarte más lejos.
+QUÉ VAN A APRENDER
+Qué profesiones están creciendo y cuáles desapareciendo
+Cómo explotar sus habilidades (matemáticas, arte, comunicación...) con IA
+Primeros pasos para emprender o crear algo propio desde ya
+Cómo usar la IA para estudiar mejor y más rápido
+Herramientas reales que ya usan los profesionales del futuro
+PARA QUIÉN ES
+Jóvenes que no saben qué quieren estudiar o a qué dedicarse
+Los que ya tienen una idea y quieren saber cómo hacerla realidad
+Cualquiera que sienta que el sistema educativo actual se queda corto
+
+PROGRAMA 5 — Monta tu negocio tú solo, sin saber de tecnología
+AUDIENCIA
+Emprendedores y personas que quieren montar algo propio
+DESCRIPCIÓN CORTA
+Con IA puedes crear tu logo, tu web, tus vídeos y tus textos de venta. Sin contratar a nadie. Sin saber diseño ni programación. Tú solo.
+QUÉ VAS A APRENDER
+Crear tu logo e identidad visual con IA
+Montar una web funcional sin programar
+Generar contenido para redes: fotos, vídeos, textos
+Escribir textos de venta que conviertan
+Automatizar tareas repetitivas de tu negocio
+PARA QUIÉN ES
+Tienes una idea de negocio pero no sabes por dónde empezar
+No tienes presupuesto para contratar agencias o diseñadores
+Quieres hacer las cosas tú mismo y aprender en el proceso
+
+PROGRAMA 6 — Mejora tu material educativo con IA
+AUDIENCIA
+Profesores y educadores
+DESCRIPCIÓN CORTA
+Menos tiempo preparando y corrigiendo. Más tiempo enseñando. La IA te ayuda a crear mejores materiales, personalizar contenido y reducir la carga burocrática.
+QUÉ VAS A APRENDER
+Crear presentaciones, fichas y materiales didácticos con IA
+Corregir y dar feedback más rápido con ayuda de herramientas
+Adaptar el contenido al nivel de cada alumno
+Generar exámenes, resúmenes y esquemas automáticamente
+Organizar y planificar tu semana docente con IA
+PARA QUIÉN ES
+Profesores de cualquier nivel educativo
+Que sientan que pasan demasiado tiempo en tareas administrativas
+Que quieran innovar en el aula sin complicarse
+
+PROGRAMA 7 — Más tiempo para tu cocina, menos para todo lo demás
+AUDIENCIA
+Hosteleros, dueños de bares y restaurantes
+DESCRIPCIÓN CORTA
+Gestiona las reseñas, crea contenido para redes y atrae más clientes. Sin agencias. Sin presupuestos grandes. Con la IA haciendo el trabajo pesado.
+QUÉ VAS A APRENDER
+Responder reseñas de Google con IA en segundos
+Crear fotos atractivas de tus platos sin fotógrafo
+Generar posts para Instagram y redes de forma automática
+Crear tu carta o menú de forma visual y atractiva
+Captar más clientes locales con herramientas digitales simples
+PARA QUIÉN ES
+Tienes un bar, restaurante o negocio de hostelería pequeño o mediano
+No tienes tiempo ni dinero para contratar a alguien de marketing
+Quieres estar más visible online sin dedicarle horas
+
+PROGRAMA 8 — Dedícate a lo que importa, la medicina
+AUDIENCIA
+Médicos, enfermeros y profesionales de la salud
+DESCRIPCIÓN CORTA
+La burocracia clínica te roba tiempo de medicina real. La IA puede transcribir consultas, organizar historiales y filtrar información para que tú te centres en el paciente.
+QUÉ VAS A APRENDER
+Transcripción automática de consultas en tiempo real
+Organización y resumen de historiales clínicos con IA
+Actualización científica personalizada: literatura médica filtrada por tu especialidad
+Reducción de carga documental en el día a día
+Cómo usar la IA como apoyo clínico sin perder autonomía profesional
+PARA QUIÉN ES
+Médicos y sanitarios que sienten que el papeleo les roba tiempo del paciente
+Los que quieren mantenerse actualizados sin dedicarle horas
+Profesionales curiosos que quieren explorar la IA con criterio
+
+PROGRAMA 9 — Prepara tu equipo para trabajar diferente
+AUDIENCIA
+Empresas y pymes
+DESCRIPCIÓN CORTA
+Tu equipo puede trabajar más rápido, cometer menos errores y centrarse en lo que importa. Solo necesita saber cómo usar la IA en su día a día.
+QUÉ INCLUYE
+Formación por departamento: marketing, ventas, administración, operaciones
+Herramientas concretas para cada rol, no teoría genérica
+Entregables reales: tu equipo sale con sistemas que usa desde el primer día
+Adaptación total a tu sector y tamaño de empresa
+PARA QUIÉN ES
+Empresas que quieren que su equipo adopte la IA de verdad
+Las que han comprado herramientas pero nadie las usa
+Las que quieren diferenciarse antes de que lo haga su competencia
+
+8. PÁGINA PARA INSTITUCIONES (/instituciones)
+Esta es la página de venta B2B. El cliente es una fundación, ayuntamiento, colegio, asociación o empresa. Tiene que transmitir seriedad y facilidad.
+
+SECCIÓN 1 — HERO
+Título: '¿Quieres llevar la IA a tu comunidad?'
+Subtítulo: 'Diseñamos talleres y programas a medida para fundaciones, asociaciones, centros educativos y empresas. Llevamos la formación nosotros. Tú nos dices quiénes son.'
+CTA: 'Hablemos' → scroll al formulario
+
+SECCIÓN 2 — CÓMO FUNCIONA
+TÍTULO: '¿CÓMO TRABAJAMOS CONTIGO?'
+3 PASOS SIMPLES
+Paso 1 — Nos cuentas quiénes son: tu colectivo, cuántas personas, qué necesitan.
+Paso 2 — Diseñamos el programa: contenidos, duración, actividades, formato.
+Paso 3 — Lo impartimos nosotros: presencial o en remoto, con materiales incluidos.
+
+SECCIÓN 3 — PARA QUIÉN
+TÍTULO: 'TRABAJAMOS CON'
+Fundaciones y asociaciones sociales
+Asociaciones de mujeres y colectivos
+Centros educativos: colegios e institutos
+Ayuntamientos y entidades públicas
+Empresas y pymes
+Centros de día y asociaciones de mayores
+
+SECCIÓN 4 — POR QUÉ AETHER SCHOOL
+No somos una academia online. Venimos a vosotros.
+Adaptamos el programa a tu colectivo, no al revés.
+Tenemos programas para todos: mayores, jóvenes, mujeres, profesionales.
+Resultados visibles desde el primer taller.
+
+SECCIÓN 5 — FORMULARIO DE CONTACTO
+TÍTULO: '¿HABLAMOS?'
+CAMPOS DEL FORMULARIO
+Nombre y apellidos
+Nombre de la organización
+Email
+Teléfono
+¿A qué colectivo va dirigido? (campo de texto libre)
+¿Cuántas personas aproximadamente?
+Mensaje opcional
+Botón: 'Enviar solicitud'
+
+9. SOBRE NOSOTROS (/sobre-nosotros)
+Página sencilla. Nada de filosofía corporativa. Quiénes somos, por qué hacemos esto y cómo contactar.
+
+Título: '¿Quiénes somos?'
+Texto: Aether School es la escuela de formación en IA de Aether Labs. Nacimos porque vimos que la inteligencia artificial estaba llegando a todos los rincones de la vida, pero la formación seguía siendo para técnicos y empresas grandes. Nosotros queremos que sea para todos.
+Texto: Somos el puente entre la tecnología más avanzada del mundo y las personas que más la necesitan. Sin tecnicismos. Sin barreras. Con resultados reales.
+Link: 'Conoce Aether Labs → aetherlabs.es'
+
+10. NOTAS TÉCNICAS PARA ANTIGRAVITY
+
+SEO
+Title de home: 'Aether School | Formación en IA para personas reales'
+Meta description: 'Talleres y programas de inteligencia artificial adaptados a cada persona. Para mujeres, mayores, jóvenes, profesores, médicos y empresas. Sin tecnicismos.'
+Cada página de programa tiene su propio title y meta description
+
+Accesibilidad
+Fuentes mínimo 16px en desktop, 18px en móvil
+Botones con contraste alto — accesibles para personas mayores
+Alt text en todas las imágenes
+Sin autoplay de vídeos
+
+Rendimiento
+Core Web Vitals 90+ en Lighthouse
+Lazy load en imágenes
+Optimización para móvil prioritaria (mobile first)
+
+Formularios
+Todos los formularios deben enviar a un email configurado (a definir)
+Confirmación visible tras enviar: 'Recibido. Te contactamos en menos de 24h.'
+Sin captchas complejos — accesibilidad primero
+
+Dominio y hosting
+A confirmar con Víctor: ¿aetherschool.es o school.aetherlabs.es? Preguntar antes de desplegar.
+
+RESUMEN DE ENTREGABLES
+Al terminar, Antigravity debe haber creado:
+1 Home completa
+1 Página de catálogo de programas
+9 Páginas individuales de programa (una por audiencia)
+1 Página para instituciones
+1 Página sobre nosotros
+1 Página de contacto
+Navegación global consistente
+Footer consistente
+Formularios funcionales en todas las páginas que los requieran
+
+Recuerda: claridad ante todo. Si algo no se entiende en 5 segundos, se rehace.

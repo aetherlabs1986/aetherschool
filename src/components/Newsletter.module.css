@@ -1,0 +1,45 @@
+.newsletter {
+    padding: 80px 0;
+}
+
+.inner {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    margin-bottom: 36px;
+}
+
+.content h2 {
+    margin-bottom: 12px;
+}
+
+.content p {
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fields {
+    display: flex;
+    gap: 12px;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .fields {
+        flex-direction: column;
+    }
+}

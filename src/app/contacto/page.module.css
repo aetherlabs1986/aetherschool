@@ -1,0 +1,128 @@
+.hero {
+    padding: 160px 0 60px;
+    background: var(--bg-secondary);
+}
+
+.hero h1 {
+    margin-bottom: 12px;
+}
+
+.heroSub {
+    font-size: 1.15rem;
+    max-width: 500px;
+}
+
+/* Options */
+.optionsGrid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.optionCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.optionIcon {
+    font-size: 2.5rem;
+}
+
+.optionCard h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.optionCard p {
+    font-size: 0.95rem;
+    margin: 0 auto;
+}
+
+.optionCard .btn {
+    margin-top: auto;
+}
+
+.whatsapp {
+    border-color: rgba(37, 211, 102, 0.2);
+}
+
+/* Form Block */
+.formBlock {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.formBlock h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Motivo Selector */
+.motivoSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.motivoBtn {
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--border-subtle);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-sans);
+}
+
+.motivoBtn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.motivoActive {
+    background: var(--accent-subtle);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form .btn {
+    margin-top: 12px;
+}
+
+.trustText {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .motivoSelector {
+        flex-direction: column;
+    }
+}

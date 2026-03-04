@@ -1,0 +1,71 @@
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(20, 30, 43, 0.97);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-subtle);
+    padding: 20px 24px;
+    animation: slideUp 0.4s ease;
+}
+
+.bannerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.bannerText {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.bannerActions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btnAccept {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+}
+
+.btnConfig {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bannerActions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnAccept,
+    .btnConfig {
+        width: 100%;
+    }
+}

@@ -1,0 +1,384 @@
+AETHER SCHOOL — EXPANSIÓN WEB
+Volumen 2 · Contenido extra, secciones adicionales y profundidad de marca
+Prompt completo para Antigravity · Aether Labs · 2026
+
+Este documento es el complemento del Volumen 1. No repite lo ya definido. Añade todas las secciones extra que hacen que la web de Aether School pase de 'funcional' a 'memorable'. Son secciones opcionales o de segunda fase, pero todas están pensadas y listas para implementar.
+
+Lee el Volumen 1 primero si no lo has hecho. Este documento asume que ya tienes la estructura base y el estilo visual definido.
+
+1. PÁGINA SOBRE NOSOTROS — VERSIÓN COMPLETA
+En el Volumen 1 dimos una versión mínima. Esta es la versión completa, con historia, valores, equipo y visión. Esta página convierte confianza en decisión de compra.
+
+SECCIÓN 1 — QUIÉNES SOMOS (La historia real)
+TÍTULO
+No somos una academia. Somos un puente.
+TEXTO PRINCIPAL
+Aether School nació de una frustración sencilla: la inteligencia artificial estaba cambiando el mundo, pero la formación seguía siendo para técnicos, para empresas grandes y para gente que ya sabía de qué iba el tema.
+
+Nosotros vimos que quedaba fuera mucha gente. La señora de 68 años que quería entender qué era eso que le contaba su nieto. El cocinero de 40 que quería que su restaurante no se quedara atrás. La profesora que pasaba 3 horas corrigiendo lo que podría hacer en 20 minutos. El joven de 16 que no sabía qué estudiar porque el sistema educativo no le hablaba del futuro real.
+
+Para esa gente existe Aether School. Para llevarles la tecnología más avanzada del mundo explicada de forma humana, sin barreras, sin tecnicismos y con resultados desde el primer día.
+
+SECCIÓN 2 — NUESTROS VALORES
+DISEÑO SUGERIDO
+6 tarjetas en grid 2x3. Cada una con icono simple, título del valor y 2 líneas de explicación.
+
+Valor 1 — Las personas primero
+La tecnología no tiene sentido si no mejora la vida de las personas. Cada programa lo diseñamos pensando en quien lo va a recibir, no en lo que es más fácil de enseñar.
+
+Valor 2 — Claridad ante todo
+Si algo no se entiende en 5 segundos, lo reescribimos. No usamos tecnicismos para parecer más listos. Los usamos si y solo si añaden claridad.
+
+Valor 3 — Resultados desde el primer día
+Nadie sale de un taller nuestro con apuntes teóricos. Sale con algo hecho. Una postal, un menú, un borrador, una idea ejecutada. El resultado es inmediato o no vale.
+
+Valor 4 — Sin dejar a nadie atrás
+La brecha digital existe y es real. Parte de nuestra misión es reducirla. Por eso buscamos activamente colaborar con instituciones que llegan a colectivos menos digitalizados.
+
+Valor 5 — Honestidad sobre la IA
+La IA no es magia ni va a solucionar todo. Pero sí puede ayudarte mucho si sabes cómo usarla. No vendemos humo. Enseñamos lo que funciona de verdad.
+
+Valor 6 — Somos el puente, no el muro
+No somos guardianes de la tecnología. Somos la puerta de entrada. Queremos que después de pasar por Aether School, cualquiera se sienta capaz de seguir aprendiendo solo.
+
+SECCIÓN 3 — NUESTRA HISTORIA (Timeline visual)
+DISEÑO SUGERIDO
+Línea de tiempo vertical con 4-5 hitos. Fondo oscuro, puntos en verde neón, texto claro a los lados.
+
+2023 — Nace Aether Labs. Empezamos implementando IA para empresas. Vimos que había un problema más grande: la gente no sabía cómo usarla.
+2024 — Primeras formaciones. Empezamos a dar talleres puntuales a equipos de empresa. La respuesta nos sorprendió.
+2025 — Nace la idea de Aether School. Decidimos separar la formación en una marca propia para hacerlo bien.
+2026 — Primeros programas oficiales. Empezamos con instituciones en Badalona y abrimos el catálogo completo.
+Futuro — Llegar a más ciudades, más colectivos y más instituciones. La IA para todos, no para pocos.
+
+SECCIÓN 4 — EL EQUIPO
+NOTA PARA ANTIGRAVITY
+Víctor confirmará los datos del equipo. De momento diseñar el componente con placeholders. Cada card de persona tiene: foto, nombre, rol en Aether School y 1 línea de descripción.
+
+Card 1 — Placeholder: Nombre / Rol / Descripción 1 línea
+Card 2 — Placeholder: Nombre / Rol / Descripción 1 línea
+Diseño: fotos en formato circular, estilo editorial limpio, fondo claro
+
+SECCIÓN 5 — AETHER LABS (La empresa detrás)
+TÍTULO
+Aether School forma parte del universo Aether Labs
+TEXTO
+Detrás de Aether School está Aether Labs, un estudio especializado en implementación de inteligencia artificial para empresas y profesionales. Esa experiencia real en proyectos de IA es lo que hace que nuestra formación sea diferente: no enseñamos teoría de libro, enseñamos lo que aplicamos cada día.
+CTA
+Botón: 'Conoce Aether Labs' → aetherlabs.es
+
+2. SECCIÓN DE PREGUNTAS FRECUENTES (FAQ)
+El FAQ reduce la fricción de compra. Especialmente importante para audiencias que no están habituadas a contratar formación online o para instituciones que necesitan tener todo claro antes de comprometerse.
+
+DISEÑO SUGERIDO
+Acordeón expandible. Fondo neutro. Pregunta en negrita, respuesta desplegable al hacer click. Sin scroll infinito.
+
+FAQ GENERALES (para el público en general)
+¿Necesito saber de tecnología para apuntarme?
+No. Todos nuestros programas están diseñados para personas que parten de cero o casi cero. Si sabes usar el móvil o el ordenador a nivel básico, es suficiente. Y si no, también te ayudamos.
+¿Son clases online o presenciales?
+Depende del programa y de con quién trabajemos. Muchos de nuestros talleres son presenciales, especialmente los que hacemos con instituciones. Algunos programas también tienen formato online o híbrido. En cada programa te indicamos el formato disponible.
+¿Cuánto duran los talleres?
+Los talleres de introducción suelen durar entre 2 y 4 horas. Los programas más completos se organizan en varias sesiones. Adaptamos la duración a lo que necesita cada grupo.
+¿Qué necesito traer o tener?
+Normalmente solo necesitas un móvil o un portátil. En los talleres presenciales te decimos con antelación exactamente qué traer. No hace falta instalar nada complicado.
+¿Tienen certificado o diploma?
+Sí. Al finalizar cada programa entregamos un certificado de participación de Aether School. Para formaciones en empresa que requieran certificación oficial, consúltanos, ya que depende del tipo de programa.
+¿Puedo apuntarme si soy mayor y no entiendo bien la tecnología?
+Absolutamente. El programa 'Conéctate con el mundo' está pensado exactamente para ti. Empezamos desde cero, a tu ritmo, sin prisa y con mucha paciencia.
+¿Qué pasa si me pierdo en algún momento del taller?
+Levanta la mano o escríbenos. En nuestros talleres siempre hay alguien pendiente de que nadie se quede atrás. No hay preguntas tontas. Estamos aquí para eso.
+
+FAQ PARA INSTITUCIONES Y EMPRESAS
+¿Podemos personalizar el contenido para nuestro colectivo?
+Sí, y es lo que hacemos siempre. Antes de diseñar cualquier programa hacemos una reunión con vosotros para entender quiénes son, qué necesitan y qué espera la institución. No tenemos un único programa enlatado.
+¿Cuántas personas pueden participar por sesión?
+Depende del formato. Los talleres presenciales funcionan mejor con grupos de entre 10 y 30 personas. Para grupos más grandes lo dividimos en sesiones. Para formaciones en empresa adaptamos el formato.
+¿Pueden venir a nuestra sede o espacio?
+Sí. Nos desplazamos a vuestras instalaciones. Solo necesitamos un espacio con conexión a internet y pantalla o proyector.
+¿Tienen experiencia con fundaciones o entidades públicas?
+Sí. Tenemos experiencia trabajando con asociaciones, fundaciones y centros educativos. Entendemos los tiempos, los procesos y las necesidades específicas de estos entornos.
+¿Pueden emitir factura?
+Sí. Aether School opera bajo Aether Labs, empresa española con todos los documentos en regla para facturar a instituciones públicas y privadas.
+¿Puede la formación acogerse a subvenciones o bonificaciones?
+Dependiendo del tipo de formación y del colectivo, puede haber opciones de cofinanciación a través de FUNDAE, fondos europeos de digitalización o subvenciones locales. Consúltanos y te orientamos.
+
+3. SECCIÓN DE IMPACTO Y PRUEBA SOCIAL
+La prueba social es lo que convierte a los indecisos. Para un público no digitalizado, los números y los testimonios son lo más poderoso.
+
+BLOQUE DE NÚMEROS — ¿Cuánto impacto hemos tenido?
+NOTA PARA ANTIGRAVITY
+Los números reales los confirmará Víctor. De momento diseñar el componente con placeholders. 4 números grandes en fila, con descripción debajo.
+
+Número 1 — Placeholder: 'X personas formadas'
+Número 2 — Placeholder: 'X talleres impartidos'
+Número 3 — Placeholder: 'X instituciones colaboradoras'
+Número 4 — Placeholder: 'X% de satisfacción media'
+DISEÑO SUGERIDO
+Fondo oscuro. Números en verde neón, grandes y en negrita. Descripción en blanco debajo. Estilo tipo dashboard.
+
+TESTIMONIOS
+DISEÑO SUGERIDO
+Cards de testimonio con foto (o avatar), nombre, perfil y texto. 3 en fila en desktop, 1 en móvil. Carrusel opcional si hay muchos.
+
+ESTRUCTURA DE CADA CARD
+Foto o avatar de la persona
+Nombre y descripción breve: ej. 'María, 67 años, Badalona'
+Texto del testimonio: máximo 3 líneas
+Programa que hizo: etiqueta verde pequeña
+
+TESTIMONIOS PLACEHOLDER PARA DISEÑO
+
+TESTIMONIO 1
+"Nunca pensé que podría usar la inteligencia artificial. Vine sin saber nada y salí habiendo creado cosas que nunca imaginé. Lo recomiendo a todas mis amigas." — Carmen, 61 años · Programa: Empodérate con IA
+
+TESTIMONIO 2
+"Mis alumnos notan la diferencia desde que uso IA para preparar mis clases. Antes me llevaba horas lo que ahora hago en minutos. Y lo más importante: disfruto más enseñando." — Marcos, profesor de secundaria · Programa: Mejora tu material educativo con IA
+
+TESTIMONIO 3
+"Tengo un bar pequeño y no tenía ni idea de redes sociales. Ahora gestiono mis reseñas y publico fotos de mis platos yo solo. Ha cambiado cómo me ven los clientes." — Paco, hostelero · Programa: Más tiempo para tu cocina
+
+TESTIMONIO 4
+"Mi abuelo tiene 74 años y ahora me llama para contarme lo que ha descubierto con la IA. Lo que parecía imposible, Aether School lo hizo posible." — Laura, nieta de participante · Programa: Conéctate con el mundo
+
+4. SECCIÓN DE BLOG Y RECURSOS GRATUITOS
+El blog tiene dos funciones: SEO orgánico y autoridad. Si cada semana hay contenido útil y gratuito sobre IA aplicada a la vida real, Aether School se convierte en referencia. Y eso trae tráfico sin pagar.
+
+ESTRUCTURA DE LA SECCIÓN /recursos
+Título: 'Aprende gratis. Sin tecnicismos.'
+Subtítulo: 'Artículos, guías y recursos prácticos sobre inteligencia artificial para todo el mundo.'
+Filtros por categoría: Para mayores / Para jóvenes / Para profesores / Para hostelería / Para emprender / General
+Grid de cards: imagen, categoría en verde, título, descripción 1 línea, tiempo de lectura, botón 'Leer'
+
+IDEAS DE ARTÍCULOS PARA EL LANZAMIENTO
+PARA PERSONAS MAYORES
+Cómo hablar con la IA: tu primer paso para no sentirte perdido
+5 cosas que puedes pedirle a la inteligencia artificial desde el móvil
+¿Es seguro usar la IA? Lo que nadie te explica con claridad
+
+PARA PROFESORES
+Cómo preparar una clase completa en 15 minutos con IA
+Las 3 herramientas de IA que todo profesor debería conocer en 2026
+Cómo personalizar el aprendizaje de tus alumnos sin esfuerzo extra
+
+PARA HOSTELERÍA
+Cómo responder reseñas de Google con IA y no morir en el intento
+Crea fotos de tus platos que den hambre, sin fotógrafo
+Cómo conseguir más clientes locales con herramientas gratuitas de IA
+
+PARA JÓVENES Y FAMILIAS
+Las 10 profesiones del futuro que el sistema educativo no te enseña
+Si tuviera 16 años hoy, esto es lo que haría con IA
+Cómo saber qué se te da bien y cómo convertirlo en algo real
+
+PARA EMPRENDEDORES
+Crea tu logo, tu web y tu contenido en un día, sin gastar dinero
+Las automatizaciones de IA que cualquier negocio pequeño debería tener
+Cómo competir con empresas más grandes usando inteligencia artificial
+
+RECURSOS DESCARGABLES (LEAD MAGNETS)
+Cada recurso descargable tiene un formulario simple: nombre + email. Sirve para captar leads y nutrir la base de datos.
+
+Guía PDF: '10 prompts para empezar con la IA hoy mismo' — para público general
+Guía PDF: 'Kit del profesor: 5 herramientas de IA para el aula' — para docentes
+Guía PDF: 'Manual de IA para mayores: tu primera semana paso a paso' — para personas mayores
+Checklist: 'Lo que necesitas para montar tu negocio con IA' — para emprendedores
+Plantilla: 'Menú semanal saludable con IA' — para el programa de mujeres
+NOTA DE DISEÑO
+Los recursos se presentan como tarjetas con portada visual del PDF, título, descripción y botón de descarga. Tras dejar email, se descarga automáticamente y reciben un email de bienvenida.
+
+5. SECCIÓN DE MISIÓN E IMPACTO SOCIAL
+Aether School no es solo un negocio de formación. Tiene una misión clara: reducir la brecha digital. Esta sección lo cuenta y convierte a la marca en algo con propósito, lo cual genera conexión emocional real.
+
+BLOQUE DE MISIÓN
+TÍTULO
+Creemos que la IA debe ser para todos
+TEXTO
+Vivimos en un momento histórico. La inteligencia artificial está cambiando cómo trabajamos, cómo aprendemos y cómo vivimos. Pero no todo el mundo tiene acceso a ese conocimiento.
+
+Hay una brecha creciente entre quienes saben usar estas herramientas y quienes no. Y esa brecha no es de inteligencia, es de oportunidad.
+
+En Aether School trabajamos activamente para cerrar esa brecha. Por eso colaboramos con fundaciones, asociaciones, ayuntamientos y centros educativos que llegan a los colectivos que más lo necesitan.
+
+BLOQUE ¿CON QUIÉN COLABORAMOS?
+DISEÑO SUGERIDO
+Logos de instituciones colaboradoras en fila sobre fondo claro. Si no hay logos aún, diseñar el componente vacío con texto: 'Colaboramos con instituciones públicas y privadas de toda España.'
+
+Asociaciones de mujeres y colectivos femeninos
+Centros de día y asociaciones de personas mayores
+Institutos y colegios públicos y concertados
+Ayuntamientos y entidades locales
+Fundaciones sociales
+Cámaras de comercio y asociaciones empresariales
+
+BLOQUE DE PROPÓSITO
+"La tecnología más avanzada del mundo no vale nada si solo llega a los que ya lo tienen todo. Nosotros llevamos la IA a donde más falta hace."
+
+6. PÁGINA DE CONTACTO — VERSIÓN COMPLETA (/contacto)
+El contacto tiene que ser lo más fácil posible. Para personas no digitales, un formulario ya puede ser una barrera. Dar todas las opciones posibles.
+
+SECCIÓN 1 — OPCIONES DE CONTACTO
+TÍTULO
+¿Cómo prefieres que hablemos?
+
+Opción 1 — WhatsApp (prioritaria)
+Botón verde grande: 'Escríbenos por WhatsApp' → link directo a WhatsApp con mensaje predefinido.
+Mensaje predefinido: 'Hola, me interesa saber más sobre Aether School.'
+
+Opción 2 — Formulario web
+El formulario estándar: Nombre / Email / Teléfono / Programa de interés (selector) / Mensaje / Enviar.
+
+Opción 3 — Email directo
+hola@aetherlabs.es — visible y clicable.
+
+Opción 4 — Llamada
+Si Víctor confirma teléfono de contacto, añadirlo aquí. Especialmente importante para el programa de personas mayores.
+
+SECCIÓN 2 — SELECTOR DE MOTIVO
+ANTES DEL FORMULARIO, UN SELECTOR SIMPLE
+Quiero apuntarme a un programa
+Represento una institución o empresa
+Quiero más información sobre un programa concreto
+Otra consulta
+El selector puede cambiar el mensaje del formulario o pre-rellenar un campo, pero no es obligatorio. Lo importante es que el usuario sepa que hay alguien al otro lado.
+
+SECCIÓN 3 — RESPUESTA Y EXPECTATIVAS
+TEXTO DE CONFIANZA BAJO EL FORMULARIO
+Te respondemos en menos de 24 horas. Si es urgente, escríbenos por WhatsApp.
+Esta frase es importante para reducir la ansiedad de personas que no están habituadas a contactar con empresas online.
+
+7. TEXTOS LEGALES Y PRIVACIDAD
+Necesarios para operar. Deben existir aunque sean simples.
+
+PÁGINAS LEGALES A CREAR
+/aviso-legal — Identificación legal de la empresa (Aether Labs)
+/politica-de-privacidad — Cómo se tratan los datos del formulario
+/politica-de-cookies — Cookies usadas en la web
+
+BANNER DE COOKIES
+DISEÑO SUGERIDO
+Banner en la parte inferior de la pantalla al entrar. Fondo oscuro, texto claro. Dos botones: 'Aceptar todas' y 'Configurar'. Sin oscurecer toda la pantalla.
+
+TEXTO DEL BANNER
+Usamos cookies para mejorar tu experiencia. Puedes aceptarlas todas o configurar cuáles quieres.
+
+NOTA SOBRE RGPD
+Todos los formularios deben incluir el checkbox de aceptación de política de privacidad con link. Sin ese checkbox marcado, el formulario no envía.
+Texto del checkbox: 'He leído y acepto la política de privacidad de Aether School.'
+
+8. SECCIÓN DE NEWSLETTER
+Una lista de correo propia es el activo más valioso a largo plazo. Hay que empezar a construirla desde el primer día.
+
+BLOQUE DE SUSCRIPCIÓN (aparece en Home y en el Blog)
+TÍTULO
+Cada semana, algo útil sobre IA en tu correo
+SUBTÍTULO
+Sin spam. Sin tecnicismos. Solo lo que funciona, explicado para personas reales. Gratis.
+FORMULARIO
+Solo nombre y email. Botón: 'Quiero aprender'. Bajo el botón: 'Te puedes dar de baja cuando quieras.'
+DISEÑO SUGERIDO
+Fondo oscuro, diferenciado del resto. Bloque centrado. Imagen o ilustración lateral sencilla.
+
+PRIMER EMAIL DE BIENVENIDA
+ASUNTO
+Bienvenido a Aether School. Esto es lo primero que tienes que saber.
+CONTENIDO
+Presentación breve de qué es Aether School
+Enlace al recurso gratuito más popular (lead magnet)
+Los 3 programas más visitados con link directo
+Invitación a responder si tienen alguna pregunta
+TONO
+Cálido, cercano, sin presión de venta. Como el primer mensaje de un amigo que sabe mucho.
+
+9. CONSIDERACIONES ESPECIALES PARA MÓVIL
+Una parte importante del público de Aether School accederá desde el móvil. En concreto el público mayor y el de hostelería. Mobile first no es opcional.
+
+ADAPTACIONES CRÍTICAS
+Botones de al menos 48px de alto — fáciles de pulsar con el dedo
+Fuente mínimo 18px en cuerpo de texto en móvil
+WhatsApp como CTA principal en móvil — está en todos los teléfonos
+Menú hamburguesa simple — solo 4 opciones máximo
+Formularios con campos grandes y teclado numérico para el teléfono
+Sin popups que bloqueen el contenido en móvil
+Imágenes optimizadas — muchos usuarios del público mayor tienen datos limitados
+
+PRUEBA DE USABILIDAD SUGERIDA
+Antes de lanzar, hacer que al menos 2 personas mayores de 60 años naveguen la web sin ayuda y observar dónde se pierden. Eso vale más que cualquier test técnico.
+
+10. ESTRATEGIA DE CONTENIDO PARA REDES SOCIALES
+La web y las redes se alimentan mutuamente. Este apartado define cómo deben conectarse y qué tipo de contenido genera tráfico real al catálogo.
+
+REDES PRIORITARIAS
+Instagram — Para el público general, mujeres, jóvenes y contenido visual
+TikTok — Para jóvenes y contenido de demostración rápida
+LinkedIn — Para instituciones, empresas y profesores
+WhatsApp Business — Canal de conversión directa, no de contenido
+
+TIPOS DE CONTENIDO QUE FUNCIONAN
+PARA INSTAGRAM Y TIKTOK
+'Mira lo que hizo mi abuela de 70 años con IA' — contenido emocional y viral
+Antes/después: resultado de un taller en tiempo real
+Mini-tutoriales de 30 segundos: 'Haz esto con IA hoy mismo'
+Reacciones reales de personas en talleres presenciales
+
+PARA LINKEDIN
+Casos de éxito con instituciones: qué hicimos, con quién, qué resultado
+Artículos sobre el futuro de la formación y la brecha digital
+Novedades de programas y apertura de nuevas ciudades
+
+REGLA DE CONTENIDO AETHER SCHOOL
+REGLA DE ORO DEL CONTENIDO
+Cada pieza de contenido debe conseguir UNA de estas tres cosas: que alguien se sienta identificado, que aprenda algo útil, o que quiera saber más. Si no cumple ninguna, no se publica.
+
+CONEXIÓN RRSS — WEB
+Todos los posts de Instagram y TikTok deben tener un link en bio que lleve a la web
+Los reels de demostración enlazan con la página del programa correspondiente
+Los artículos del blog se comparten en LinkedIn con extracto
+El lead magnet se promociona en stories con 'Link en bio'
+
+11. MAPA WEB COMPLETO — RESUMEN FINAL
+Todas las páginas y secciones que debe tener la web de Aether School al completo. Las marcadas con * son de segunda fase.
+
+Páginas principales
+/ — Home
+/programas — Catálogo
+/programa/empoderate-con-ia
+/programa/conectate-con-el-mundo
+/programa/aprende-a-crear
+/programa/descubre-tu-futuro
+/programa/monta-tu-negocio
+/programa/mejora-tu-material
+/programa/mas-tiempo-para-tu-cocina
+/programa/dedicate-a-la-medicina
+/programa/prepara-tu-equipo
+/instituciones — Para instituciones y empresas
+/sobre-nosotros — Historia, valores, equipo
+/contacto — Todas las formas de contacto
+
+Páginas de soporte
+/recursos — Blog y recursos gratuitos *
+/recursos/[slug] — Artículo individual *
+/aviso-legal
+/politica-de-privacidad
+/politica-de-cookies
+
+Componentes globales (aparecen en todas las páginas)
+Navegación principal: Logo / Programas / Instituciones / Recursos* / Contacto
+Botón de WhatsApp flotante en móvil
+Banner de cookies
+Footer: Logo + descripción + links principales + email + RRSS + legal
+Bloque de newsletter al final de Home y Blog *
+
+NOTA FINAL PARA ANTIGRAVITY
+
+Este es el Volumen 2 del prompt de Aether School. Junto con el Volumen 1, tienes todo lo que necesitas para construir una web completa, bien pensada y lista para escalar.
+
+Lo más importante que recuerdes al construir esta web:
+
+El público no siempre es digital. Diseña para quien menos sabe, no para quien más.
+Claridad antes que belleza. Aunque la belleza también importa.
+Cada sección tiene un propósito. Si no convierte, educa. Si no educa, quita.
+El móvil es el primer dispositivo para este público. Empieza por ahí.
+El WhatsApp es la puerta de entrada más fácil. Ponlo en todas partes.
+
+"Aether School es el puente entre la tecnología más avanzada del mundo y las personas que más la necesitan. Eso tiene que sentirse en cada pixel."

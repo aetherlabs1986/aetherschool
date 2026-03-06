@@ -142,32 +142,218 @@
     margin: 0;
 }
 
-/* ═══ LEARN GRID ═══ */
-.learnGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 24px;
+/* ═══ LEARN INTERACTIVE ═══ */
+.learnInteractive {
+    display: flex;
+    gap: 40px;
+    background: rgba(15, 23, 34, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    backdrop-filter: blur(20px);
 }
 
-.learnCard {
-    padding: 32px;
-    border-radius: var(--radius-lg);
+.learnNav {
+    flex: 0 0 320px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.learnNavItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    width: 100%;
+}
+
+.learnNavItem:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+}
+
+.learnNavItem.active {
+    background: var(--bg-card);
+    border-color: rgba(130, 255, 31, 0.3);
+    color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.learnNavIcon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.active .learnNavIcon {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: scale(1.1);
+}
+
+.learnNavTitle {
+    flex-grow: 1;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.learnNavArrow {
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-10px);
+}
+
+.active .learnNavArrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.learnDetail {
+    flex-grow: 1;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.learnDetailContent {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* Key for re-animating when index changes is often a key prop on the element in React, 
+       but here we rely on the state change and CSS animation if possible. */
+    animation: learnFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes learnFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.learnDetailIcon {
+    width: 72px;
+    height: 72px;
+    background: var(--accent-subtle);
+    border: 1px solid rgba(130, 255, 31, 0.2);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    margin-bottom: 28px;
+}
+
+.learnDetailTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.learnDetailDesc {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 580px;
+}
+
+.learnDetailGraphic {
+    position: absolute;
+    right: -80px;
+    bottom: -80px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.graphicCircle {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    opacity: 0.15;
+    border-radius: 50%;
+}
+
+/* ═══ LEARN MOBILE ═══ */
+.learnMobile {
+    display: none;
+    flex-direction: column;
     gap: 16px;
 }
 
-.checkIcon {
-    color: var(--accent);
-    flex-shrink: 0;
-    margin-top: 2px;
+.learnMobileItem {
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.learnCard p {
-    margin: 0;
+.learnMobileItem .learnNavIcon {
+    margin-top: -4px;
+    background: var(--accent-subtle);
+    color: var(--accent);
+}
+
+.learnMobileItem h4 {
+    margin: 0 0 10px 0;
     color: var(--text-primary);
-    font-size: 1.05rem;
-    line-height: 1.5;
+    font-size: 1.15rem;
+}
+
+.learnMobileItem p {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+    .learnNav {
+        flex: 0 0 280px;
+    }
+
+    .learnDetail {
+        padding: 40px;
+    }
+
+    .learnDetailTitle {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .learnInteractive {
+        display: none !important;
+    }
+
+    .learnMobile {
+        display: flex;
+    }
 }
 
 /* ═══ PARA QUIÉN ═══ */

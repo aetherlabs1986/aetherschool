@@ -15,6 +15,7 @@ const Icon = ({ name, ...props }) => {
 export default function ProgramaClient({ program }) {
     const [submitted, setSubmitted] = useState(false);
     const [openIndex, setOpenIndex] = useState(null);
+    const [activeLearnIndex, setActiveLearnIndex] = useState(0);
     const observerRef = useRef(null);
 
     useEffect(() => {
@@ -117,17 +118,55 @@ export default function ProgramaClient({ program }) {
                         <p>Resultados prácticos desde el primer día.</p>
                     </div>
 
-                    <div className={styles.learnGrid}>
-                        {program.learns.map((item, i) => (
-                            <div
-                                key={i}
-                                className={`reveal glass-card ${styles.learnCard}`}
-                                style={{ transitionDelay: `${(i % 3) * 100}ms` }}
-                            >
-                                <div className={styles.checkIcon}>
-                                    <Icon name="CheckCircle2" size={20} />
+                    <div className={styles.learnInteractive}>
+                        <div className={`reveal ${styles.learnNav}`}>
+                            {program.learns.map((item, i) => (
+                                <button
+                                    key={i}
+                                    className={`${styles.learnNavItem} ${activeLearnIndex === i ? styles.active : ""}`}
+                                    onClick={() => setActiveLearnIndex(i)}
+                                    onMouseEnter={() => setActiveLearnIndex(i)}
+                                >
+                                    <div className={styles.learnNavIcon}>
+                                        <Icon name={item.icon || "CheckCircle2"} size={22} />
+                                    </div>
+                                    <span className={styles.learnNavTitle}>{item.title}</span>
+                                    <Icon name="ChevronRight" size={18} className={styles.learnNavArrow} />
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className={`reveal reveal-delay-2 ${styles.learnDetail}`}>
+                            <div className={styles.learnDetailContent} key={activeLearnIndex}>
+                                <div className={styles.learnDetailIcon}>
+                                    <Icon name={program.learns[activeLearnIndex].icon || "CheckCircle2"} size={40} />
                                 </div>
-                                <p>{item}</p>
+                                <h3 className={styles.learnDetailTitle}>
+                                    {program.learns[activeLearnIndex].title}
+                                </h3>
+                                <p className={styles.learnDetailDesc}>
+                                    {program.learns[activeLearnIndex].desc}
+                                </p>
+                                <div className={styles.learnDetailGraphic}>
+                                    {/* Abstract decorative element for premium feel */}
+                                    <div className={styles.graphicCircle} />
+                                    <div className={styles.graphicDots} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Version: Simple accordion or stack */}
+                    <div className={styles.learnMobile}>
+                        {program.learns.map((item, i) => (
+                            <div key={i} className={`reveal glass-card ${styles.learnMobileItem}`}>
+                                <div className={styles.learnNavIcon}>
+                                    <Icon name={item.icon || "CheckCircle2"} size={22} />
+                                </div>
+                                <div>
+                                    <h4>{item.title}</h4>
+                                    <p>{item.desc}</p>
+                                </div>
                             </div>
                         ))}
                     </div>

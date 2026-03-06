@@ -1,13 +1,21 @@
+/* ═══ HERO ═══ */
 .hero {
     padding: 160px 0 80px;
     background: var(--bg-secondary);
 }
 
-.hero .tag {
+.heroSplit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.heroText .tag {
     margin-bottom: 16px;
 }
 
-.hero h1 {
+.heroText h1 {
     margin: 16px 0 28px;
 }
 
@@ -15,12 +23,24 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 700px;
 }
 
 .storyText p {
     font-size: 1.05rem;
     line-height: 1.8;
+}
+
+.heroImg {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    position: relative;
+}
+
+.heroPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
 }
 
 /* Values */
@@ -32,23 +52,23 @@
 
 .valueCard {
     text-align: center;
-    padding: 28px 20px;
+    padding: 32px 24px;
 }
 
 .valueIcon {
-    font-size: 2rem;
+    font-size: 2.2rem;
     display: block;
     margin-bottom: 14px;
 }
 
 .valueCard h3 {
     font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: var(--text-primary);
 }
 
 .valueCard p {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
     margin: 0 auto;
 }
 
@@ -119,7 +139,7 @@
 
 .teamCard {
     text-align: center;
-    padding: 32px 24px;
+    padding: 36px 24px;
 }
 
 .teamAvatar {
@@ -191,8 +211,10 @@
 
 .quote {
     margin-top: 32px;
-    padding: 24px 32px;
+    padding: 28px 32px;
     border-left: 3px solid var(--accent);
+    background: var(--bg-card);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
     font-style: italic;
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -201,6 +223,16 @@
 }
 
 @media (max-width: 768px) {
+    .heroSplit {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .heroImg {
+        order: -1;
+        max-height: 300px;
+    }
+
     .valuesGrid {
         grid-template-columns: 1fr;
     }

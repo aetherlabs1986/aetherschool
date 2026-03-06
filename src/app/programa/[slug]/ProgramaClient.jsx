@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function ProgramaClient({ program }) {
@@ -15,7 +16,17 @@ export default function ProgramaClient({ program }) {
         <>
             {/* ═══ HERO ═══ */}
             <section className={styles.hero}>
-                <div className="container">
+                <div className={styles.heroBg} aria-hidden="true">
+                    <Image
+                        src={program.image}
+                        alt=""
+                        fill
+                        className={styles.heroBgImg}
+                        priority
+                    />
+                    <div className={styles.heroOverlay} />
+                </div>
+                <div className={`container ${styles.heroContent}`}>
                     <span className="tag">{program.audienceLabel}</span>
                     <h1 className={styles.heroTitle}>{program.title}</h1>
                     <p className={styles.heroDesc}>{program.shortDesc}</p>

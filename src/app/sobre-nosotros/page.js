@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -66,31 +67,44 @@ export default function SobreNosotros() {
 
     return (
         <>
-            {/* ═══ QUIÉNES SOMOS ═══ */}
+            {/* ═══ HERO - STORY + IMAGE ═══ */}
             <section className={styles.hero}>
                 <div className="container">
-                    <span className="tag">Nuestra historia</span>
-                    <h1>No somos una academia. Somos un puente.</h1>
-                    <div className={styles.storyText}>
-                        <p>
-                            Aether School nació de una frustración sencilla: la inteligencia
-                            artificial estaba cambiando el mundo, pero la formación seguía
-                            siendo para técnicos, para empresas grandes y para gente que ya
-                            sabía de qué iba el tema.
-                        </p>
-                        <p>
-                            Nosotros vimos que quedaba fuera mucha gente. La señora de 68 años
-                            que quería entender qué era eso que le contaba su nieto. El
-                            cocinero de 40 que quería que su restaurante no se quedara atrás.
-                            La profesora que pasaba 3 horas corrigiendo lo que podría hacer en
-                            20 minutos. El joven de 16 que no sabía qué estudiar porque el
-                            sistema educativo no le hablaba del futuro real.
-                        </p>
-                        <p>
-                            Para esa gente existe Aether School. Para llevarles la tecnología
-                            más avanzada del mundo explicada de forma humana, sin barreras, sin
-                            tecnicismos y con resultados desde el primer día.
-                        </p>
+                    <div className={styles.heroSplit}>
+                        <div className={styles.heroText}>
+                            <span className="tag">Nuestra historia</span>
+                            <h1>No somos una academia. Somos un puente.</h1>
+                            <div className={styles.storyText}>
+                                <p>
+                                    Aether School nació de una frustración sencilla: la inteligencia
+                                    artificial estaba cambiando el mundo, pero la formación seguía
+                                    siendo para técnicos, para empresas grandes y para gente que ya
+                                    sabía de qué iba el tema.
+                                </p>
+                                <p>
+                                    Nosotros vimos que quedaba fuera mucha gente. La señora de 68 años
+                                    que quería entender qué era eso que le contaba su nieto. El
+                                    cocinero de 40 que quería que su restaurante no se quedara atrás.
+                                    La profesora que pasaba 3 horas corrigiendo lo que podría hacer en
+                                    20 minutos.
+                                </p>
+                                <p>
+                                    Para esa gente existe Aether School. Para llevarles la tecnología
+                                    más avanzada del mundo explicada de forma humana, sin barreras, sin
+                                    tecnicismos y con resultados desde el primer día.
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.heroImg}>
+                            <Image
+                                src="/img-about.png"
+                                alt="Fundador de Aether School"
+                                width={520}
+                                height={600}
+                                className={styles.heroPhoto}
+                                priority
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

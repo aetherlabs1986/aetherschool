@@ -1,6 +1,7 @@
 export const programs = [
     {
         slug: "empoderate-con-ia",
+        image: "/img-mujeres.png",
         emoji: "👩",
         audienceTag: "MUJERES 40-60",
         audienceLabel: "Para mujeres de 40 a 60 años",
@@ -25,6 +26,7 @@ export const programs = [
     },
     {
         slug: "conectate-con-el-mundo",
+        image: "/img-mayores.png",
         emoji: "👴",
         audienceTag: "PERSONAS MAYORES 65+",
         audienceLabel: "Para personas mayores de 65 años",
@@ -49,6 +51,7 @@ export const programs = [
     },
     {
         slug: "aprende-a-crear",
+        image: "/img-ninos.png",
         emoji: "🧒",
         audienceTag: "NIÑOS 6-12",
         audienceLabel: "Para niños de 6 a 12 años",
@@ -73,6 +76,7 @@ export const programs = [
     },
     {
         slug: "descubre-tu-futuro",
+        image: "/img-jovenes.png",
         emoji: "🧑",
         audienceTag: "JÓVENES 13-18",
         audienceLabel: "Para jóvenes de 13 a 18 años",
@@ -97,6 +101,7 @@ export const programs = [
     },
     {
         slug: "monta-tu-negocio",
+        image: "/img-emprendedores.png",
         emoji: "🚀",
         audienceTag: "EMPRENDEDORES",
         audienceLabel: "Para emprendedores y personas que quieren montar algo propio",
@@ -121,6 +126,7 @@ export const programs = [
     },
     {
         slug: "mejora-tu-material",
+        image: "/img-profesores.png",
         emoji: "📚",
         audienceTag: "PROFESORES",
         audienceLabel: "Para profesores y educadores",
@@ -145,6 +151,7 @@ export const programs = [
     },
     {
         slug: "mas-tiempo-para-tu-cocina",
+        image: "/img-hosteleria.png",
         emoji: "🍽️",
         audienceTag: "HOSTELERÍA",
         audienceLabel: "Para hosteleros, dueños de bares y restaurantes",
@@ -169,6 +176,7 @@ export const programs = [
     },
     {
         slug: "dedicate-a-la-medicina",
+        image: "/img-medicos.png",
         emoji: "🩺",
         audienceTag: "MÉDICOS Y SANIDAD",
         audienceLabel: "Para médicos, enfermeros y profesionales de la salud",
@@ -193,6 +201,7 @@ export const programs = [
     },
     {
         slug: "prepara-tu-equipo",
+        image: "/img-empresas.png",
         emoji: "🏢",
         audienceTag: "EMPRESAS",
         audienceLabel: "Para empresas y pymes",

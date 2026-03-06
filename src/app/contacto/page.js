@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Contacto() {
@@ -20,7 +21,17 @@ export default function Contacto() {
         <>
             {/* ═══ HERO ═══ */}
             <section className={styles.hero}>
-                <div className="container">
+                <div className={styles.heroBg} aria-hidden="true">
+                    <Image
+                        src="/img-contacto.png"
+                        alt=""
+                        fill
+                        className={styles.heroBgImg}
+                        priority
+                    />
+                    <div className={styles.heroOverlay} />
+                </div>
+                <div className={`container ${styles.heroContent}`}>
                     <h1>¿Cómo prefieres que hablemos?</h1>
                     <p className={styles.heroSub}>
                         Elige la forma que más te convenga. Estamos aquí para ayudarte.

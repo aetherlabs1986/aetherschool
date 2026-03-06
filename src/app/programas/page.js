@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { programs } from "@/data/programs";
 import styles from "./page.module.css";
 
@@ -22,20 +23,28 @@ export default function Programas() {
 
             <section className="section section-dark">
                 <div className="container">
-                    <div className={styles.programGrid}>
-                        {programs.map((p) => (
+                    <div className={styles.featuredGrid}>
+                        {programs.map((p, i) => (
                             <Link
                                 key={p.slug}
                                 href={`/programa/${p.slug}`}
-                                className={`card ${styles.programCard}`}
+                                className={`${styles.featuredCard} ${i % 2 !== 0 ? styles.featuredReverse : ""}`}
                             >
-                                <div className={styles.cardTop}>
-                                    <span className={styles.cardEmoji}>{p.emoji}</span>
-                                    <span className="tag">{p.audienceTag}</span>
+                                <div className={styles.featuredImg}>
+                                    <Image
+                                        src={p.image}
+                                        alt={p.title}
+                                        width={600}
+                                        height={450}
+                                        className={styles.featuredPhoto}
+                                    />
                                 </div>
-                                <h2 className={styles.cardTitle}>{p.title}</h2>
-                                <p className={styles.cardDesc}>{p.shortDesc}</p>
-                                <span className="btn btn-link">Ver programa →</span>
+                                <div className={styles.featuredText}>
+                                    <span className="tag">{p.audienceTag}</span>
+                                    <h2 className={styles.featuredTitle}>{p.title}</h2>
+                                    <p className={styles.featuredDesc}>{p.shortDesc}</p>
+                                    <span className="btn btn-primary">Ver programa →</span>
+                                </div>
                             </Link>
                         ))}
                     </div>

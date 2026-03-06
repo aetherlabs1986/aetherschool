@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Instituciones() {
@@ -15,7 +16,18 @@ export default function Instituciones() {
         <>
             {/* ═══ HERO ═══ */}
             <section className={styles.hero}>
-                <div className="container">
+                <div className={styles.heroBg} aria-hidden="true">
+                    <Image
+                        src="/img-instituciones.png"
+                        alt=""
+                        fill
+                        className={styles.heroBgImg}
+                        priority
+                    />
+                    <div className={styles.heroOverlay} />
+                </div>
+                <div className={`container ${styles.heroContent}`}>
+                    <span className="tag">Para instituciones y empresas</span>
                     <h1>¿Quieres llevar la IA a tu comunidad?</h1>
                     <p className={styles.heroSub}>
                         Diseñamos talleres y programas a medida para fundaciones,
@@ -35,17 +47,17 @@ export default function Instituciones() {
                         <h2>¿Cómo trabajamos contigo?</h2>
                     </div>
                     <div className={styles.stepsGrid}>
-                        <div className={styles.step}>
+                        <div className={`card ${styles.step}`}>
                             <div className={styles.stepNum}>1</div>
                             <h3>Nos cuentas quiénes son</h3>
                             <p>Tu colectivo, cuántas personas, qué necesitan.</p>
                         </div>
-                        <div className={styles.step}>
+                        <div className={`card ${styles.step}`}>
                             <div className={styles.stepNum}>2</div>
                             <h3>Diseñamos el programa</h3>
                             <p>Contenidos, duración, actividades, formato.</p>
                         </div>
-                        <div className={styles.step}>
+                        <div className={`card ${styles.step}`}>
                             <div className={styles.stepNum}>3</div>
                             <h3>Lo impartimos nosotros</h3>
                             <p>Presencial o en remoto, con materiales incluidos.</p>
@@ -84,7 +96,7 @@ export default function Instituciones() {
                     <div className="section-header">
                         <h2>Por qué Aether School</h2>
                     </div>
-                    <div className={`grid-2 ${styles.reasonGrid}`}>
+                    <div className={styles.reasonGrid}>
                         {[
                             "No somos una academia online. Venimos a vosotros.",
                             "Adaptamos el programa a tu colectivo, no al revés.",

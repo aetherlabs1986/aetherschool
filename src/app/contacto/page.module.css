@@ -1,9 +1,39 @@
+/* ═══ HERO ═══ */
 .hero {
-    padding: 160px 0 60px;
-    background: var(--bg-secondary);
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 160px 0 80px;
 }
 
-.hero h1 {
+.heroBg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.heroBgImg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(15, 23, 34, 0.92) 0%,
+            rgba(15, 23, 34, 0.75) 50%,
+            rgba(15, 23, 34, 0.6) 100%);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.heroContent h1 {
     margin-bottom: 12px;
 }
 
@@ -26,6 +56,12 @@
     text-decoration: none;
     cursor: pointer;
     gap: 12px;
+    padding: 36px 24px;
+    transition: var(--transition);
+}
+
+.optionCard:hover {
+    transform: translateY(-4px);
 }
 
 .optionIcon {
@@ -48,6 +84,10 @@
 
 .whatsapp {
     border-color: rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp:hover {
+    border-color: rgba(37, 211, 102, 0.4);
 }
 
 /* Form Block */

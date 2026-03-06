@@ -1,11 +1,36 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import * as LucideIcons from "lucide-react";
 import styles from "./page.module.css";
+
+const Icon = ({ name, ...props }) => {
+    const LucideIcon = LucideIcons[name];
+    if (!LucideIcon) return null;
+    return <LucideIcon {...props} />;
+};
 
 export default function Instituciones() {
     const [submitted, setSubmitted] = useState(false);
+    const observerRef = useRef(null);
+
+    useEffect(() => {
+        observerRef.current = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const elements = document.querySelectorAll(".reveal");
+        elements.forEach((el) => observerRef.current.observe(el));
+
+        return () => {
+            if (observerRef.current) observerRef.current.disconnect();
+        };
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,6 +41,7 @@ export default function Instituciones() {
         <>
             {/* ═══ HERO ═══ */}
             <section className={styles.hero}>
+                <div className="aurora-bg" />
                 <div className={styles.heroBg} aria-hidden="true">
                     <Image
                         src="/img-instituciones.png"
@@ -27,37 +53,39 @@ export default function Instituciones() {
                     <div className={styles.heroOverlay} />
                 </div>
                 <div className={`container ${styles.heroContent}`}>
-                    <span className="tag">Para instituciones y empresas</span>
-                    <h1>¿Quieres llevar la IA a tu comunidad?</h1>
-                    <p className={styles.heroSub}>
+                    <span className="tag reveal">Para instituciones y empresas</span>
+                    <h1 className="reveal reveal-delay-1">¿Quieres llevar la <em>IA</em> a tu comunidad?</h1>
+                    <p className={`reveal reveal-delay-2 ${styles.heroSub}`}>
                         Diseñamos talleres y programas a medida para fundaciones,
                         asociaciones, centros educativos y empresas. Llevamos la formación
                         nosotros. Tú nos dices quiénes son.
                     </p>
-                    <a href="#formulario" className="btn btn-primary">
-                        Hablemos
-                    </a>
+                    <div className="reveal reveal-delay-3">
+                        <a href="#formulario" className="btn btn-primary">
+                            Hablemos
+                        </a>
+                    </div>
                 </div>
             </section>
 
             {/* ═══ CÓMO FUNCIONA ═══ */}
-            <section className="section section-dark">
+            <section className="section section-light">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>¿Cómo trabajamos contigo?</h2>
+                    <div className="section-header reveal">
+                        <h2>¿Cómo trabajamos <em>contigo</em>?</h2>
                     </div>
                     <div className={styles.stepsGrid}>
-                        <div className={`card ${styles.step}`}>
+                        <div className={`reveal glass-card ${styles.step}`}>
                             <div className={styles.stepNum}>1</div>
-                            <h3>Nos cuentas quiénes son</h3>
-                            <p>Tu colectivo, cuántas personas, qué necesitan.</p>
+                            <h3>Nos dices quiénes son</h3>
+                            <p>Tu colectivo, cuántas personas, qué necesidades específicas tienen.</p>
                         </div>
-                        <div className={`card ${styles.step}`}>
+                        <div className={`reveal reveal-delay-1 glass-card ${styles.step}`}>
                             <div className={styles.stepNum}>2</div>
                             <h3>Diseñamos el programa</h3>
                             <p>Contenidos, duración, actividades, formato.</p>
                         </div>
-                        <div className={`card ${styles.step}`}>
+                        <div className={`reveal reveal-delay-2 glass-card ${styles.step}`}>
                             <div className={styles.stepNum}>3</div>
                             <h3>Lo impartimos nosotros</h3>
                             <p>Presencial o en remoto, con materiales incluidos.</p>
@@ -69,20 +97,22 @@ export default function Instituciones() {
             {/* ═══ PARA QUIÉN ═══ */}
             <section className="section section-darker">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Trabajamos con</h2>
+                    <div className="section-header reveal">
+                        <h2>Trabajamos <em>con</em></h2>
                     </div>
                     <div className={`grid-3 ${styles.clientGrid}`}>
                         {[
-                            { icon: "🏛️", text: "Fundaciones y asociaciones sociales" },
-                            { icon: "👩‍👩‍👧", text: "Asociaciones de mujeres y colectivos" },
-                            { icon: "🏫", text: "Centros educativos: colegios e institutos" },
-                            { icon: "🏢", text: "Ayuntamientos y entidades públicas" },
-                            { icon: "💼", text: "Empresas y pymes" },
-                            { icon: "🏥", text: "Centros de día y asociaciones de mayores" },
+                            { icon: "Landmark", text: "Fundaciones y asociaciones sociales" },
+                            { icon: "UsersRound", text: "Asociaciones de mujeres y colectivos" },
+                            { icon: "GraduationCap", text: "Centros educativos: colegios e institutos" },
+                            { icon: "Building2", text: "Ayuntamientos y entidades públicas" },
+                            { icon: "Briefcase", text: "Empresas y pymes" },
+                            { icon: "HeartPulse", text: "Centros de día y asociaciones de mayores" },
                         ].map((item, i) => (
-                            <div key={i} className={`card ${styles.clientCard}`}>
-                                <span className={styles.clientIcon}>{item.icon}</span>
+                            <div key={i} className={`reveal glass-card ${styles.clientCard}`} style={{ transitionDelay: `${(i % 3) * 100}ms` }}>
+                                <span className={styles.clientIcon}>
+                                    <Icon name={item.icon} size={32} strokeWidth={1.5} />
+                                </span>
                                 <p>{item.text}</p>
                             </div>
                         ))}
@@ -93,18 +123,22 @@ export default function Instituciones() {
             {/* ═══ POR QUÉ ═══ */}
             <section className="section section-dark">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Por qué Aether School</h2>
+                    <div className="section-header reveal">
+                        <h2>Por qué <em>Aether School</em></h2>
                     </div>
                     <div className={styles.reasonGrid}>
                         {[
                             "No somos una academia online. Venimos a vosotros.",
                             "Adaptamos el programa a tu colectivo, no al revés.",
-                            "Tenemos programas para todos: mayores, jóvenes, mujeres, profesionales.",
+                            "Programas para todos: mayores, jóvenes, mujeres, profesionales.",
                             "Resultados visibles desde el primer taller.",
+                            "Acompañamiento post-talleres para resolver dudas.",
+                            "Materiales didácticos simplificados y accesibles.",
                         ].map((text, i) => (
-                            <div key={i} className={styles.reason}>
-                                <span className={styles.reasonCheck}>✓</span>
+                            <div key={i} className={`reveal glass-card ${styles.reason}`} style={{ transitionDelay: `${i * 100}ms` }}>
+                                <span className={styles.reasonCheck}>
+                                    <Icon name="CheckCircle2" size={24} />
+                                </span>
                                 <p>{text}</p>
                             </div>
                         ))}
@@ -113,9 +147,10 @@ export default function Instituciones() {
             </section>
 
             {/* ═══ FORMULARIO ═══ */}
-            <section className="section section-darker" id="formulario">
-                <div className="container">
-                    <div className={styles.formBlock}>
+            <section className="section section-darker" id="formulario" style={{ position: "relative", overflow: "hidden" }}>
+                <div className="aurora-bg aurora-bg-alt" />
+                <div className="container" style={{ position: "relative", zIndex: 1 }}>
+                    <div className={`reveal glass-card ${styles.formBlock}`}>
                         <h2>¿Hablamos?</h2>
 
                         {!submitted ? (

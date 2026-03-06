@@ -2,12 +2,13 @@ export const programs = [
     {
         slug: "empoderate-con-ia",
         image: "/img-mujeres.png",
-        emoji: "👩",
+        icon: "HeartHandshake",
         audienceTag: "MUJERES 40-60",
         audienceLabel: "Para mujeres de 40 a 60 años",
         title: "Empodérate con IA",
-        shortDesc:
-            "Usa la inteligencia artificial para lo que más te importa. Salud, creatividad, recuerdos, comunicación. Sin necesitar saber nada de tecnología.",
+        shortDesc: "Usa la inteligencia artificial para lo que más te importa. Salud, creatividad, recuerdos, comunicación. Sin necesitar saber nada de tecnología.",
+        problem: "La tecnología avanza muy rápido y a veces sientes que te quedas atrás o dependes de otros para hacer cosas en el ordenador o el móvil.",
+        solution: "La IA de hoy en día te entiende hablando de forma natural. Te enseñamos a usarla como a una asistente personal para simplificar tu vida, organizar tu salud y potenciar tu creatividad, sin aprender informática.",
         learns: [
             "Crear diseños, postales e invitaciones personalizadas con IA",
             "Generar menús semanales adaptados a tu salud y gustos",
@@ -21,18 +22,24 @@ export const programs = [
             "Te gustaría estar más al día sin agobiarte",
         ],
         metaTitle: "Empodérate con IA | Aether School",
-        metaDesc:
-            "Programa de inteligencia artificial para mujeres de 40 a 60 años. Aprende a usar la IA para salud, creatividad y tu día a día. Sin tecnicismos.",
+        metaDesc: "Programa de inteligencia artificial para mujeres de 40 a 60 años. Aprende a usar la IA para salud, creatividad y tu día a día. Sin tecnicismos.",
+        testimonial: {
+            image: "/testimonio-1.png",
+            role: "Alumna de Empodérate con IA",
+            quote: "Ahora hago en 10 minutos, lo que antes me llevaba 3 días. Gracias a la IA tengo más tiempo para enfocarme en lo que más me gusta.",
+            name: "Diana Martínez"
+        }
     },
     {
         slug: "conectate-con-el-mundo",
         image: "/img-mayores.png",
-        emoji: "👴",
+        icon: "Radio",
         audienceTag: "PERSONAS MAYORES 65+",
         audienceLabel: "Para personas mayores de 65 años",
         title: "Conéctate con el mundo",
-        shortDesc:
-            "La inteligencia artificial puede ayudarte a estar más cerca de tu familia, a sentirte acompañada y a vivir mejor el día a día.",
+        shortDesc: "La inteligencia artificial puede ayudarte a estar más cerca de tu familia, a sentirte acompañada y a vivir mejor el día a día.",
+        problem: "La brecha digital aísla. Las pantallas táctiles y las aplicaciones modernas muchas veces son confusas, letras pequeñas y procesos frustrantes.",
+        solution: "Te enseñamos a usar la voz. La inteligencia artificial moderna te permite hablarle al móvil como si fuera tu nieto. Aprenderás a pedirle ayuda, que te lea las noticias o te busque música sin tocar botones.",
         learns: [
             "Hablar con la IA como si fuera una persona: hacerle preguntas, pedir ayuda",
             "Comunicarte mejor con tu familia a través del móvil",
@@ -46,18 +53,25 @@ export const programs = [
             "Si quieres sentirte menos sola o menos perdida con la tecnología",
         ],
         metaTitle: "Conéctate con el mundo | Aether School",
-        metaDesc:
-            "Programa de IA para personas mayores de 65 años. Aprende a usar la tecnología para comunicarte, crear recuerdos y vivir mejor.",
+        metaDesc: "Programa de IA para personas mayores de 65 años. Aprende a usar la tecnología para comunicarte, crear recuerdos y vivir mejor.",
+        testimonial: {
+            image: "/testimonio-2.png",
+            role: "Alumna de Conéctate con el Mundo",
+            quote: "Pensé que a mi edad ya no podría aprender esto. Ahora le enseño a mis nietos cómo generar imágenes con una frase.",
+            name: "Carmen Salazar",
+            reverse: true
+        }
     },
     {
         slug: "aprende-a-crear",
         image: "/img-ninos.png",
-        emoji: "🧒",
+        icon: "Wand2",
         audienceTag: "NIÑOS 6-12",
         audienceLabel: "Para niños de 6 a 12 años",
         title: "Aprende a crear lo que imaginas",
-        shortDesc:
-            "Los niños tienen ideas increíbles. La IA les da las herramientas para hacerlas realidad: cuentos, personajes, música, mundos inventados.",
+        shortDesc: "Los niños tienen ideas increíbles. La IA les da las herramientas para hacerlas realidad: cuentos, personajes, música, mundos inventados.",
+        problem: "Los niños de hoy consumen pantallas pasivamente (viendo vídeos o jugando), pero raramente utilizan la tecnología para crear de forma activa.",
+        solution: "Transformamos a los niños de 'consumidores' a 'creadores'. Les enseñamos que la IA es una herramienta mágica con la que pueden escribir sus propios cuentos, dibujar monstruos o componer música.",
         learns: [
             "Crear cuentos ilustrados con sus propias ideas",
             "Inventar personajes y diseñarlos con IA",
@@ -71,18 +85,18 @@ export const programs = [
             "Los talleres son dinámicos, divertidos y con resultados que se llevan a casa",
         ],
         metaTitle: "Aprende a crear lo que imaginas | Aether School",
-        metaDesc:
-            "Programa de IA para niños de 6 a 12 años. Crea cuentos, personajes, música y juegos con inteligencia artificial.",
+        metaDesc: "Programa de IA para niños de 6 a 12 años. Crea cuentos, personajes, música y juegos con inteligencia artificial.",
     },
     {
         slug: "descubre-tu-futuro",
         image: "/img-jovenes.png",
-        emoji: "🧑",
+        icon: "Compass",
         audienceTag: "JÓVENES 13-18",
         audienceLabel: "Para jóvenes de 13 a 18 años",
         title: "Descubre quién quieres ser y cómo llegar",
-        shortDesc:
-            "El sistema educativo no te enseña las profesiones del futuro. Nosotros sí. Descubre qué se te da bien, qué salidas tiene, y cómo la IA puede llevarte más lejos.",
+        shortDesc: "El sistema educativo no te enseña las profesiones del futuro. Nosotros sí. Descubre qué se te da bien, qué salidas tiene, y cómo la IA puede llevarte más lejos.",
+        problem: "Decidir tu futuro a los 16 años basándote en profesiones tradicionales ya no funciona en un mundo que cambia cada seis meses.",
+        solution: "Exploramos las profesiones reales del futuro. Te enseñamos cómo la IA va a cambiar los sectores creativos, científicos y de negocios, y cómo usarla hoy para tener una ventaja injusta mañana.",
         learns: [
             "Qué profesiones están creciendo y cuáles desapareciendo",
             "Cómo explotar sus habilidades (matemáticas, arte, comunicación...) con IA",
@@ -96,18 +110,18 @@ export const programs = [
             "Cualquiera que sienta que el sistema educativo actual se queda corto",
         ],
         metaTitle: "Descubre quién quieres ser | Aether School",
-        metaDesc:
-            "Programa de IA para jóvenes de 13 a 18 años. Descubre profesiones del futuro y cómo la inteligencia artificial te puede dar ventaja.",
+        metaDesc: "Programa de IA para jóvenes de 13 a 18 años. Descubre profesiones del futuro y cómo la inteligencia artificial te puede dar ventaja.",
     },
     {
         slug: "monta-tu-negocio",
         image: "/img-emprendedores.png",
-        emoji: "🚀",
+        icon: "Rocket",
         audienceTag: "EMPRENDEDORES",
         audienceLabel: "Para emprendedores y personas que quieren montar algo propio",
         title: "Monta tu negocio tú solo, sin saber de tecnología",
-        shortDesc:
-            "Con IA puedes crear tu logo, tu web, tus vídeos y tus textos de venta. Sin contratar a nadie. Sin saber diseño ni programación. Tú solo.",
+        shortDesc: "Con IA puedes crear tu logo, tu web, tus vídeos y tus textos de venta. Sin contratar a nadie. Sin saber diseño ni programación. Tú solo.",
+        problem: "Emprender es caro. Crear una marca, una web y generar contenido constante en redes sociales requiere presupuesto y equipo que al principio no tienes.",
+        solution: "La IA es tu equipo fundador. Te enseñamos a crear y automatizar todo el apartado técnico y creativo de tu negocio para que valides tu idea rápido, gastando cero euros en diseñadores o programadores.",
         learns: [
             "Crear tu logo e identidad visual con IA",
             "Montar una web funcional sin programar",
@@ -121,18 +135,18 @@ export const programs = [
             "Quieres hacer las cosas tú mismo y aprender en el proceso",
         ],
         metaTitle: "Monta tu negocio con IA | Aether School",
-        metaDesc:
-            "Programa de IA para emprendedores. Crea tu logo, web, contenido y automatiza tu negocio sin contratar a nadie.",
+        metaDesc: "Programa de IA para emprendedores. Crea tu logo, web, contenido y automatiza tu negocio sin contratar a nadie.",
     },
     {
         slug: "mejora-tu-material",
         image: "/img-profesores.png",
-        emoji: "📚",
+        icon: "GraduationCap",
         audienceTag: "PROFESORES",
         audienceLabel: "Para profesores y educadores",
         title: "Mejora tu material educativo con IA",
-        shortDesc:
-            "Menos tiempo preparando y corrigiendo. Más tiempo enseñando. La IA te ayuda a crear mejores materiales, personalizar contenido y reducir la carga burocrática.",
+        shortDesc: "Menos tiempo preparando y corrigiendo. Más tiempo enseñando. La IA te ayuda a crear mejores materiales, personalizar contenido y reducir la carga burocrática.",
+        problem: "Ser profesor hoy significa pasar más tiempo planificando, corrigiendo y lidiando con burocracia que enseñando y conectando con los alumnos.",
+        solution: "Recupera tu tiempo. Te mostramos herramientas de IA que generan rúbricas, unidades didácticas, resúmenes visuales e incluso corrigen borradores, dejando que tú te centres en el impacto humano en el aula.",
         learns: [
             "Crear presentaciones, fichas y materiales didácticos con IA",
             "Corregir y dar feedback más rápido con ayuda de herramientas",
@@ -146,18 +160,18 @@ export const programs = [
             "Que quieran innovar en el aula sin complicarse",
         ],
         metaTitle: "Mejora tu material educativo con IA | Aether School",
-        metaDesc:
-            "Programa de IA para profesores. Crea materiales, corrige más rápido y personaliza el aprendizaje con inteligencia artificial.",
+        metaDesc: "Programa de IA para profesores. Crea materiales, corrige más rápido y personaliza el aprendizaje con inteligencia artificial.",
     },
     {
         slug: "mas-tiempo-para-tu-cocina",
         image: "/img-hosteleria.png",
-        emoji: "🍽️",
+        icon: "UtensilsCrossed",
         audienceTag: "HOSTELERÍA",
         audienceLabel: "Para hosteleros, dueños de bares y restaurantes",
         title: "Más tiempo para tu cocina, menos para todo lo demás",
-        shortDesc:
-            "Gestiona las reseñas, crea contenido para redes y atrae más clientes. Sin agencias. Sin presupuestos grandes. Con la IA haciendo el trabajo pesado.",
+        shortDesc: "Gestiona las reseñas, crea contenido para redes y atrae más clientes. Sin agencias. Sin presupuestos grandes. Con la IA haciendo el trabajo pesado.",
+        problem: "Un hostelero no tiene tiempo para gestionar redes sociales, responder docenas de reseñas de Google o diseñar pósters atractivos para sus eventos.",
+        solution: "Automatiza tu presencia digital. Te enseñamos cómo con un par de clics la IA responde reseñas con tono profesional, genera fotos apetitosas para Instagram y diseña tus cartas mientras tú te encargas de la sala y la cocina.",
         learns: [
             "Responder reseñas de Google con IA en segundos",
             "Crear fotos atractivas de tus platos sin fotógrafo",
@@ -171,18 +185,18 @@ export const programs = [
             "Quieres estar más visible online sin dedicarle horas",
         ],
         metaTitle: "IA para hostelería | Aether School",
-        metaDesc:
-            "Programa de IA para hosteleros. Gestiona reseñas, crea contenido para redes y atrae más clientes con inteligencia artificial.",
+        metaDesc: "Programa de IA para hosteleros. Gestiona reseñas, crea contenido para redes y atrae más clientes con inteligencia artificial.",
     },
     {
         slug: "dedicate-a-la-medicina",
         image: "/img-medicos.png",
-        emoji: "🩺",
+        icon: "Stethoscope",
         audienceTag: "MÉDICOS Y SANIDAD",
         audienceLabel: "Para médicos, enfermeros y profesionales de la salud",
         title: "Dedícate a lo que importa, la medicina",
-        shortDesc:
-            "La burocracia clínica te roba tiempo de medicina real. La IA puede transcribir consultas, organizar historiales y filtrar información para que tú te centres en el paciente.",
+        shortDesc: "La burocracia clínica te roba tiempo de medicina real. La IA puede transcribir consultas, organizar historiales y filtrar información para que tú te centres en el paciente.",
+        problem: "El estrés y el 'burnout' médico viene de mirar más al teclado que a los ojos del paciente. El 40% del tiempo se va en registros clínicos.",
+        solution: "Vuelve a ejercer la medicina. Te instalamos asistentes de IA que transcriben la consulta en tiempo real, extraen las conclusiones y rellenan la historia clínica estructurada, además de resumir papers médicos en segundos.",
         learns: [
             "Transcripción automática de consultas en tiempo real",
             "Organización y resumen de historiales clínicos con IA",
@@ -196,18 +210,18 @@ export const programs = [
             "Profesionales curiosos que quieren explorar la IA con criterio",
         ],
         metaTitle: "IA para médicos | Aether School",
-        metaDesc:
-            "Programa de IA para profesionales sanitarios. Transcribe consultas, organiza historiales y mantente actualizado con inteligencia artificial.",
+        metaDesc: "Programa de IA para profesionales sanitarios. Transcribe consultas, organiza historiales y mantente actualizado con inteligencia artificial.",
     },
     {
         slug: "prepara-tu-equipo",
         image: "/img-empresas.png",
-        emoji: "🏢",
+        icon: "Building2",
         audienceTag: "EMPRESAS",
         audienceLabel: "Para empresas y pymes",
         title: "Prepara tu equipo para trabajar diferente",
-        shortDesc:
-            "Tu equipo puede trabajar más rápido, cometer menos errores y centrarse en lo que importa. Solo necesita saber cómo usar la IA en su día a día.",
+        shortDesc: "Tu equipo puede trabajar más rápido, cometer menos errores y centrarse en lo que importa. Solo necesita saber cómo usar la IA en su día a día.",
+        problem: "Las empresas pagan suscripciones de IA caras, pero los empleados no saben cómo usarlas. El resultado es que nadie cambia su forma de trabajar.",
+        solution: "Formación de impacto aplicada a departamentos reales (marketing, administración, ventas). No enseñamos qué es un LLM, enseñamos cómo reducir informes de 4 horas a 15 minutos en el caso concreto de tu empresa.",
         learns: [
             "Formación por departamento: marketing, ventas, administración, operaciones",
             "Herramientas concretas para cada rol, no teoría genérica",
@@ -220,8 +234,7 @@ export const programs = [
             "Las que quieren diferenciarse antes de que lo haga su competencia",
         ],
         metaTitle: "Formación IA para empresas | Aether School",
-        metaDesc:
-            "Formación de inteligencia artificial para equipos de empresa. Herramientas concretas por departamento con resultados desde el primer día.",
+        metaDesc: "Formación de inteligencia artificial para equipos de empresa. Herramientas concretas por departamento con resultados desde el primer día.",
     },
 ];
 

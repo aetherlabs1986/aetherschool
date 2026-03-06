@@ -3,7 +3,7 @@ import styles from "./WhatsAppButton.module.css";
 
 export default function WhatsAppButton() {
     const message = encodeURIComponent("Hola, me interesa saber más sobre Aether School.");
-    const phone = "34600000000";
+    const phone = "34627281459";
 
     return (
         <a

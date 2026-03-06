@@ -1,115 +1,226 @@
+/* ═══ STICKY CTA ═══ */
+.stickyCtaBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 34, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+    padding: 16px 0;
+    transform: translateY(0);
+    animation: slideUpSticky 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes slideUpSticky {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stickyCtaInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.stickyTitle {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+}
+
+/* ═══ HERO ═══ */
 .hero {
     position: relative;
-    padding: 160px 0 80px;
-    background: var(--bg-secondary);
+    min-height: 80vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 120px 0 80px;
+    background: var(--bg-primary);
     overflow: hidden;
 }
 
 .heroBg {
     position: absolute;
     inset: 0;
-    pointer-events: none;
+    z-index: 1;
+}
+
+.heroAurora {
+    z-index: 0;
+    opacity: 0.3;
 }
 
 .heroBgImg {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+    opacity: 0.5;
 }
 
 .heroOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg,
-            rgba(15, 23, 34, 0.95) 0%,
-            rgba(15, 23, 34, 0.8) 50%,
-            rgba(15, 23, 34, 0.6) 100%);
+    background: linear-gradient(to bottom,
+            rgba(15, 23, 34, 0.85) 0%,
+            rgba(15, 23, 34, 0.95) 100%);
 }
 
 .heroContent {
     position: relative;
-    z-index: 1;
-}
-
-.hero .tag {
-    margin-bottom: 16px;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .heroTitle {
-    margin: 16px 0;
-    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 8px;
 }
 
 .heroDesc {
-    font-size: 1.15rem;
-    max-width: 600px;
-    margin-bottom: 28px;
-    line-height: 1.7;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-.sectionTitle {
-    margin-bottom: 36px;
+/* ═══ SPLIT LAYOUT (PROBLEM/SOLUTION) ═══ */
+.splitLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
 
-/* ═══ LEARN LIST ═══ */
-.learnList {
-    max-width: 700px;
+.splitCard {
+    padding: 48px;
+    border-radius: var(--radius-xl);
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.learnItem {
+.splitCardSuccess {
+    border-color: rgba(130, 255, 31, 0.3);
+    background: rgba(130, 255, 31, 0.03);
+}
+
+.splitIcon {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.splitCardSuccess .splitIcon {
+    color: var(--accent);
+}
+
+.splitCard h3 {
+    font-family: var(--font-sans);
+    font-size: 1.3rem;
+}
+
+.splitCard p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ═══ LEARN GRID ═══ */
+.learnGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.learnCard {
+    padding: 32px;
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: flex-start;
-    gap: 14px;
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    gap: 16px;
 }
 
 .checkIcon {
     color: var(--accent);
-    font-weight: 700;
-    font-size: 1.2rem;
     flex-shrink: 0;
     margin-top: 2px;
 }
 
-/* ═══ FOR WHO ═══ */
+.learnCard p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* ═══ PARA QUIÉN ═══ */
 .forWhoGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
 .forWhoCard {
+    padding: 40px;
     text-align: center;
-    padding: 28px 20px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .forWhoIcon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 12px;
+    width: 64px;
+    height: 64px;
+    background: var(--accent-subtle);
+    border: 1px solid rgba(130, 255, 31, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
 }
 
 .forWhoCard p {
-    font-size: 0.95rem;
-    margin: 0 auto;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.05rem;
 }
 
-/* ═══ STEPS ═══ */
+/* ═══ CÓMO FUNCIONA ═══ */
 .stepsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    text-align: center;
 }
 
-.step {
-    padding: 20px;
+.stepsGrid .step {
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .stepNum {
@@ -121,63 +232,97 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
     font-size: 1.2rem;
-    margin: 0 auto 16px;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+
+.stepsGrid h3 {
     font-family: var(--font-sans);
+    font-size: 1.25rem;
 }
 
-.step h3 {
-    margin-bottom: 8px;
-    font-size: 1.15rem;
+.stepsGrid p {
+    margin: 0;
 }
 
-.step p {
-    font-size: 0.95rem;
-    margin: 0 auto;
+/* ═══ CTA SECTION ═══ */
+.ctaSection {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 120px;
+    /* Space for the sticky bar */
 }
 
-/* ═══ CTA FORM ═══ */
 .ctaBlock {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
+    padding: 60px;
+    border-radius: var(--radius-xl);
+    text-align: left;
 }
 
-.ctaBlock h2 {
-    margin-bottom: 12px;
+.ctaHeader {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .ctaDesc {
-    font-size: 1.05rem;
-    margin: 0 auto 32px;
-}
-
-.form {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    margin: 12px auto 0;
+    font-size: 1.15rem;
 }
 
 .formRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 24px;
 }
 
-.form .btn {
-    margin-top: 12px;
+.formSuccess {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 900px) {
+    .splitLayout {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 140px 0 60px;
+    }
+
+    .heroDesc {
+        font-size: 1.1rem;
+    }
 
     .forWhoGrid,
     .stepsGrid {
         grid-template-columns: 1fr;
     }
 
+    .ctaBlock {
+        padding: 40px 24px;
+    }
+
     .formRow {
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stickyText {
+        display: none;
+    }
+
+    .stickyCtaInner {
+        justify-content: center;
+    }
+
+    .stickyCtaInner .btn {
+        width: 100%;
     }
 }

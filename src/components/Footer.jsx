@@ -33,6 +33,7 @@ export default function Footer() {
                             <Link href="/programas">Programas</Link>
                             <Link href="/instituciones">Instituciones</Link>
                             <Link href="/sobre-nosotros">Sobre nosotros</Link>
+                            <Link href="/impacto">Impacto</Link>
                             <Link href="/contacto">Contacto</Link>
                         </div>
                         <div className={styles.footerCol}>
@@ -46,7 +47,7 @@ export default function Footer() {
                             <h4 className={styles.footerColTitle}>Contacto</h4>
                             <a href="mailto:hola@aetherlabs.es">hola@aetherlabs.es</a>
                             <a
-                                href="https://wa.me/34600000000?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20Aether%20School."
+                                href="https://wa.me/34627281459?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20Aether%20School."
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

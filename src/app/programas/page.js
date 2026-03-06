@@ -1,21 +1,47 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import * as LucideIcons from "lucide-react";
 import { programs } from "@/data/programs";
 import styles from "./page.module.css";
 
-export const metadata = {
-    title: "Todos nuestros programas | Aether School",
-    description:
-        "Catálogo completo de programas de formación en inteligencia artificial. Encuentra el programa que es para ti.",
+// Helper to render Lucide icons dynamically from string names in programs.js
+const Icon = ({ name, ...props }) => {
+    const LucideIcon = LucideIcons[name];
+    if (!LucideIcon) return null;
+    return <LucideIcon {...props} />;
 };
 
 export default function Programas() {
+    const observerRef = useRef(null);
+
+    useEffect(() => {
+        observerRef.current = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const elements = document.querySelectorAll(".reveal");
+        elements.forEach((el) => observerRef.current.observe(el));
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, []);
+
     return (
         <>
             <section className={styles.hero}>
-                <div className="container">
-                    <h1>Todos nuestros programas</h1>
-                    <p className={styles.heroSub}>
+                <div className="aurora-bg" />
+                <div className="container" style={{ position: "relative", zIndex: 1 }}>
+                    <h1 className="reveal">Todos nuestros programas</h1>
+                    <p className={`reveal reveal-delay-1 ${styles.heroSub}`}>
                         Elige el que es para ti. Si no estás seguro, escríbenos.
                     </p>
                 </div>
@@ -28,7 +54,9 @@ export default function Programas() {
                             <Link
                                 key={p.slug}
                                 href={`/programa/${p.slug}`}
-                                className={`${styles.featuredCard} ${i % 2 !== 0 ? styles.featuredReverse : ""}`}
+                                className={`reveal glass-card ${styles.featuredCard} ${i % 2 !== 0 ? styles.featuredReverse : ""
+                                    }`}
+                                style={{ transitionDelay: `${(i % 3) * 100}ms` }}
                             >
                                 <div className={styles.featuredImg}>
                                     <Image
@@ -38,12 +66,20 @@ export default function Programas() {
                                         height={450}
                                         className={styles.featuredPhoto}
                                     />
+                                    <div className={styles.imgOverlay} />
                                 </div>
                                 <div className={styles.featuredText}>
-                                    <span className="tag">{p.audienceTag}</span>
+                                    <div className={styles.cardHeader}>
+                                        <div className={styles.iconCircle}>
+                                            <Icon name={p.icon} size={24} strokeWidth={1.5} />
+                                        </div>
+                                        <span className="tag">{p.audienceTag}</span>
+                                    </div>
                                     <h2 className={styles.featuredTitle}>{p.title}</h2>
                                     <p className={styles.featuredDesc}>{p.shortDesc}</p>
-                                    <span className="btn btn-primary">Ver programa →</span>
+                                    <span className={`btn btn-primary ${styles.ctaBtn}`}>
+                                        Ver programa →
+                                    </span>
                                 </div>
                             </Link>
                         ))}

@@ -1,0 +1,123 @@
+.hero {
+    position: relative;
+    padding: 160px 0 80px;
+    background: var(--bg-primary);
+    overflow: hidden;
+}
+
+.heroSub {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.casesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.caseCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
+
+.caseImg {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.caseImg img {
+    transition: transform 0.5s ease;
+}
+
+.caseCard:hover .caseImg img {
+    transform: scale(1.05);
+}
+
+.caseTags {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.caseTag {
+    padding: 4px 12px;
+    background: rgba(15, 23, 34, 0.85);
+    backdrop-filter: blur(4px);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: var(--radius-full);
+}
+
+.caseContent {
+    padding: 32px;
+}
+
+.institution {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.caseContent h3 {
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.caseContent p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.ctaBlock {
+    text-align: center;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ctaBlock h2 {
+    color: var(--text-dark);
+}
+
+.ctaBlock p {
+    color: var(--text-dark-secondary);
+    max-width: 500px;
+}
+
+@media (max-width: 991px) {
+    .casesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .caseImg {
+        height: 220px;
+    }
+
+    .caseContent {
+        padding: 24px;
+    }
+}

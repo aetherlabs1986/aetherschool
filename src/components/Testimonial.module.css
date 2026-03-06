@@ -1,0 +1,108 @@
+.wrapper {
+    /* Using the global .section-light background */
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse>* {
+    direction: ltr;
+}
+
+.imageCol {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.greenSquare {
+    position: absolute;
+    top: 5%;
+    left: -5%;
+    width: 100%;
+    height: 100%;
+    background-color: #0F5132;
+    /* Dark green from the reference image */
+    z-index: 0;
+}
+
+.reverse .greenSquare {
+    left: auto;
+    right: -5%;
+}
+
+.photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Optional: if the images aren't cutouts, maybe a slight shadow helps */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.textCol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+.role {
+    color: #5BA723;
+    /* Matching the bright green text from the reference */
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: var(--font-sans);
+}
+
+.quote {
+    font-family: var(--font-sans);
+    /* The reference uses a sans-serif for the quote */
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.name {
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-dark-secondary);
+    margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .reverse {
+        direction: ltr;
+    }
+
+    .greenSquare {
+        left: -10px;
+        top: 10px;
+        width: calc(100% + 20px);
+        height: auto;
+        bottom: -10px;
+    }
+
+    .imageCol {
+        max-width: 300px;
+    }
+}

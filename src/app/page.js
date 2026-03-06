@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { programs } from "@/data/programs";
+import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import styles from "./page.module.css";
 
@@ -137,6 +138,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ═══ PREGUNTAS FRECUENTES ═══ */}
+      <FAQ />
 
       {/* ═══ IMPACTO ═══ */}
       <section className="section section-dark">

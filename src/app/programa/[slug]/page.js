@@ -5,8 +5,9 @@ export function generateStaticParams() {
     return getAllSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }) {
-    const program = getProgramBySlug(params.slug);
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const program = getProgramBySlug(slug);
     if (!program) return {};
     return {
         title: program.metaTitle,
@@ -14,8 +15,9 @@ export function generateMetadata({ params }) {
     };
 }
 
-export default function ProgramaPage({ params }) {
-    const program = getProgramBySlug(params.slug);
+export default async function ProgramaPage({ params }) {
+    const { slug } = await params;
+    const program = getProgramBySlug(slug);
     if (!program) {
         const { notFound } = require("next/navigation");
         notFound();

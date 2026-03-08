@@ -36,7 +36,7 @@ export default function CookieBanner() {
                         Aceptar todas
                     </button>
                     <button className={`btn btn-secondary ${styles.btnConfig}`} onClick={configure}>
-                        Solo esenciales
+                        Solo necesarias
                     </button>
                 </div>
             </div>

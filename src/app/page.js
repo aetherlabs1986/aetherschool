@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import * as LucideIcons from "lucide-react";
@@ -7,6 +6,7 @@ import { programs } from "@/data/programs";
 import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import TestimonialCard from "@/components/TestimonialCard";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import styles from "./page.module.css";
 
 const Icon = ({ name, ...props }) => {
@@ -15,155 +15,270 @@ const Icon = ({ name, ...props }) => {
   return <LucideIcon {...props} />;
 };
 
-const featured = [
-  { ...programs[0], image: "/img-mujeres.png", highlight: "Para mujeres que quieren sacarle partido a la tecnología" },
-  { ...programs[1], image: "/img-mayores.png", highlight: "Para personas mayores que quieren estar al día" },
-  { ...programs[3], image: "/img-jovenes.png", highlight: "Para jóvenes de 13 a 18 años" },
-];
-
 export default function Home() {
-  const observerRef = useRef(null);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const elements = document.querySelectorAll(".reveal");
-    elements.forEach((el) => observerRef.current.observe(el));
-
-    return () => {
-      if (observerRef.current) observerRef.current.disconnect();
-    };
-  }, []);
-
   return (
     <>
-      {/* ═══ HERO ═══ */}
+      {/* ═══ HERO V2 ═══ */}
       <section className={styles.hero} style={{ position: "relative", overflow: "hidden" }}>
         <div className="aurora-bg" />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className={styles.heroSplit}>
             <div className={styles.heroText}>
-              <h1 className={`reveal ${styles.heroTitle}`}>
-                Conectamos a las personas con la <em className={styles.whiteSerif}>tecnología.</em>
+              <span className={`tag tag-dark reveal ${styles.heroEyebrow}`}>FORMACIÓN EN IA · BARCELONA</span>
+              <h1 className={`reveal reveal-delay-1 ${styles.heroTitle}`}>
+                La IA para las personas que el sistema olvidó.
               </h1>
-              <div className="reveal reveal-delay-1">
+              <div className="reveal reveal-delay-2">
                 <p className={styles.heroSub}>
                   Formación práctica en inteligencia artificial para personas reales.
-                  Sin tecnicismos. Sin complicaciones. Con resultados desde el primer
-                  día.
+                  Sin tecnicismos. Sin complicaciones. Con resultados desde el primer taller.
                 </p>
               </div>
-              <div className={`reveal reveal-delay-2 ${styles.heroCtas}`}>
+              <div className={`reveal reveal-delay-3 ${styles.heroCtas}`}>
                 <Link href="/programas" className="btn btn-primary">
-                  Ver programas
+                  Ver programas &rarr;
                 </Link>
-                <Link href="/instituciones" className="btn btn-secondary">
-                  Para instituciones
+                <Link href="/instituciones" className="btn btn-outline-dark" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+                  Para instituciones &rarr;
                 </Link>
               </div>
             </div>
-            <div className={styles.heroImg}>
+            <div className={`reveal reveal-delay-1 ${styles.heroImg}`}>
               <Image
                 src="/img-hero-v2.png"
-                alt="Personas aprendiendo IA"
+                alt="Personas aprendiendo IA en Aether School"
                 width={700}
                 height={700}
                 className={styles.heroPhoto}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 priority
               />
+              <div className={styles.heroOverlay}></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══ IMPACTO / STATS ═══ */}
-      <section className={`section section-light`}>
+      {/* ═══ BANDA DE STATS ═══ */}
+      <section className={styles.statsSection}>
         <div className="container">
-          <div className={`grid-4 ${styles.statsGrid}`}>
+          <div className={styles.statsGrid}>
             <div className={`reveal ${styles.statCard}`}>
-              <span className={styles.statNum}>+200</span>
+              <span className={styles.statNum}><AnimatedCounter prefix="+" end={400} /></span>
               <span className={styles.statLabel}>personas formadas</span>
             </div>
+            <div className={styles.statDivider}></div>
             <div className={`reveal reveal-delay-1 ${styles.statCard}`}>
-              <span className={styles.statNum}>+30</span>
+              <span className={styles.statNum}><AnimatedCounter prefix="+" end={40} /></span>
               <span className={styles.statLabel}>talleres impartidos</span>
             </div>
+            <div className={styles.statDivider}></div>
             <div className={`reveal reveal-delay-2 ${styles.statCard}`}>
-              <span className={styles.statNum}>100%</span>
+              <span className={styles.statNum}><AnimatedCounter end={100} suffix="%" /></span>
               <span className={styles.statLabel}>formación práctica</span>
             </div>
+            <div className={styles.statDivider}></div>
             <div className={`reveal reveal-delay-3 ${styles.statCard}`}>
-              <span className={styles.statNum}>4.9/5</span>
+              <span className={styles.statNum}><AnimatedCounter end={4.9} duration={1500} suffix="/5" /></span>
               <span className={styles.statLabel}>valoración media</span>
             </div>
+            <div className={styles.statDivider}></div>
+            <div className={`reveal reveal-delay-3 ${styles.statCard}`}>
+              <span className={styles.statNum}><AnimatedCounter end={4} duration={1000} /></span>
+              <span className={styles.statLabel}>ciudades activas</span>
+            </div>
+            <div className={styles.statDivider}></div>
+            <div className={`reveal reveal-delay-3 ${styles.statCard}`}>
+              <span className={styles.statNum}><AnimatedCounter end={0} duration={500} /></span>
+              <span className={styles.statLabel}>tecnicismos</span>
+            </div>
+          </div>
+          <div className={styles.scrollDownIndicator}>
+            <Icon name="ChevronDown" size={24} color="var(--accent)" />
           </div>
         </div>
       </section>
 
-      {/* ═══ PARA QUIÉN ═══ */}
-      <section className="section section-dark">
+      {/* ═══ EL PROBLEMA ═══ */}
+      <section className="section section-light">
+        <div className="container">
+          <div className={styles.problemHeader}>
+            <span className="tag reveal">EL CONTEXTO QUE NADIE EXPLICA</span>
+            <h2 className="reveal reveal-delay-1" style={{ marginTop: '16px', marginBottom: '16px' }}>El mundo cambió. La formación no.</h2>
+            <p className="reveal reveal-delay-2" style={{ maxWidth: '800px', margin: '0 auto 48px auto' }}>
+              El 39% de las habilidades laborales actuales serán obsoletas antes de 2030. La IA está cambiando cómo trabajamos, cómo aprendemos y cómo vivimos. Pero la formación disponible sigue siendo para técnicos, para empresas grandes y para gente que ya sabe de qué va el tema. El resto — la mayoría — se queda fuera.
+            </p>
+          </div>
+          <div className={styles.problemGrid}>
+            <div className="reveal glass-card card-light" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <span className={styles.problemData}><AnimatedCounter end={39} suffix="%" /></span>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text-dark)' }}>de las habilidades actuales serán obsoletas antes de 2030.</p>
+              <span className={styles.problemSource}>Fuente: WEF Future of Jobs 2025.</span>
+            </div>
+            <div className="reveal reveal-delay-1 glass-card card-light" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <span className={styles.problemData}><AnimatedCounter end={63} suffix="%" /></span>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text-dark)' }}>de los empleadores citan la brecha de habilidades como su barrera número uno de crecimiento.</p>
+              <span className={styles.problemSource}>Fuente: WEF 2025.</span>
+            </div>
+            <div className="reveal reveal-delay-2 glass-card card-light" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <span className={styles.problemData} style={{ fontSize: '3.2rem', letterSpacing: '-0.02em', color: 'var(--accent-hover)' }}>Brain Rot</span>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text-dark)' }}>Elegida Palabra del Año Oxford 2024. El deterioro cognitivo por pantallas pasivas ya es un fenómeno cultural documentado.</p>
+              <span className={styles.problemSource}>Fuente: Oxford, 37.000 votos.</span>
+            </div>
+          </div>
+          <div className="reveal reveal-delay-3" style={{ textAlign: 'center', marginTop: '60px', maxWidth: '800px', margin: '40px auto 0' }}>
+            <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)', fontWeight: '500' }}>
+              Aether School existe porque si la IA va a cambiar todo, entonces todo el mundo merece acceder a ese conocimiento. No solo los que ya lo tienen todo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ PROGRAMAS (PARA QUIÉN SOMOS) ═══ */}
+      <section className="section section-dark" id="programas">
         <div className="container">
           <div className="section-header reveal">
-            <h2>¿Para quién es <em>Aether School</em>?</h2>
+            <h2>Elige tu <em>punto de partida.</em></h2>
+            <p>Cada programa está diseñado para una persona concreta. No para todos a la vez.</p>
           </div>
-          <div className={styles.featuredGrid}>
-            {featured.map((p, i) => (
+          <div className={styles.programGrid}>
+            {programs.slice(0, 9).map((p, i) => (
               <Link
                 key={p.slug}
                 href={`/programa/${p.slug}`}
-                className={`reveal glass-card ${styles.featuredCard} ${i % 2 !== 0 ? styles.featuredReverse : ""}`}
+                className={`reveal glass-card ${styles.programCard}`}
                 style={{ transitionDelay: `${(i % 3) * 100}ms` }}
               >
-                <div className={styles.featuredImg}>
+                <div className={styles.programImgWrapper}>
                   <Image
-                    src={p.image}
+                    src={p.image || "/img-placeholder.png"}
                     alt={p.title}
-                    width={520}
-                    height={380}
-                    className={styles.featuredPhoto}
+                    width={400}
+                    height={250}
+                    className={styles.programImg}
                   />
-                  <div className={styles.imgOverlay} />
+                  <div className={styles.programOverlay} />
+                  <span className={`tag ${styles.programTag}`}>{p.audienceTag}</span>
                 </div>
-                <div className={styles.featuredText}>
-                  <div className={styles.cardHeader}>
-                    <div className={styles.iconCircle}>
-                      <Icon name={p.icon} size={24} strokeWidth={1.5} />
+                <div className={styles.programCardBody}>
+                  <div className={styles.programHeader}>
+                    <div className={styles.iconCircleSmall}>
+                      <Icon name={p.icon || "Star"} size={20} />
                     </div>
-                    <span className="tag">{p.audienceTag}</span>
+                    <h3 className={styles.programTitle}>{p.title}</h3>
                   </div>
-                  <h3 className={styles.featuredTitle}>{p.title}</h3>
-                  <p className={styles.featuredHighlight}>{p.highlight}</p>
-                  <p className={styles.featuredDesc}>{p.shortDesc}</p>
-                  <span className="btn btn-primary">Saber más →</span>
+                  <p className={styles.programDesc}>{p.shortDesc}</p>
+                  <span className={styles.programLink}>Ver programa &rarr;</span>
                 </div>
               </Link>
             ))}
           </div>
           <div className={`reveal ${styles.sectionCta}`}>
             <Link href="/programas" className="btn btn-secondary">
-              Ver todos los programas
+              Ver todos los programas &rarr;
             </Link>
           </div>
         </div>
       </section>
 
+      {/* ═══ LOS TRES EJES (NUEVA) ═══ */}
+      <section className="section section-darker" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="aurora-bg aurora-bg-alt" />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-header reveal" style={{ textAlign: 'left', maxWidth: '800px' }}>
+            <span className="tag">NUESTRA METODOLOGÍA</span>
+            <h2 style={{ marginTop: '16px', marginBottom: '16px' }}>No enseñamos IA. <em>Enseñamos personas.</em></h2>
+            <p style={{ marginLeft: '0' }}>Cada programa de Aether School se construye sobre tres ejes que el sistema educativo tradicional ignora completamente.</p>
+          </div>
 
+          <div className="grid-3" style={{ marginTop: '40px' }}>
+            <div className="reveal glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <Icon name="Brain" size={40} color="var(--accent)" />
+              <h3>Descúbrete</h3>
+              <p style={{ fontSize: '0.95rem' }}>La tecnología no tiene sentido si no sabes qué quieres amplificar. Empezamos por romper el muro del "yo no puedo".</p>
+            </div>
+            <div className="reveal reveal-delay-1 glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <Icon name="BookOpen" size={40} color="var(--accent)" />
+              <h3>Aprende lo que importa</h3>
+              <p style={{ fontSize: '0.95rem' }}>No teoría de libro. Habilidades reales de vida. Aprenderás resolviendo tus propios problemas, no ejercicios inventados.</p>
+            </div>
+            <div className="reveal reveal-delay-2 glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <Icon name="Zap" size={40} color="var(--accent)" />
+              <h3>Expándete con tecnología</h3>
+              <p style={{ fontSize: '0.95rem' }}>La IA no te reemplaza. Multiplica lo que ya eres. Aquí aprendes a usarla como un superpoder, no como una muleta.</p>
+            </div>
+          </div>
+
+          <div className="reveal reveal-delay-3" style={{ marginTop: '40px', borderTop: '1px solid var(--border-subtle)', paddingTop: '20px' }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Metodología basada en meta-análisis SAGA 2025 (350 estudios), curva del olvido de Ebbinghaus y neuroplasticidad adulta documentada.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ LOS 3 FORMATOS (NUEVA) ═══ */}
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="tag tag-dark">¿CÓMO FUNCIONA?</span>
+            <h2 style={{ marginTop: '16px' }}>Tres formas de <em>empezar.</em></h2>
+            <p>Desde el primer paso hasta el acompañamiento continuo. Tú eliges tu ritmo.</p>
+          </div>
+          <div className="grid-3">
+            <div className="reveal glass-card card-light" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <span className="tag">PARA EMPEZAR</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '8px' }}>
+                <Icon name="PlayCircle" size={28} color="var(--accent-hover)" />
+                <h3 style={{ marginBottom: 0 }}>Taller de Descubrimiento</h3>
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '12px 0', fontSize: '0.9rem', color: 'var(--text-dark-secondary)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><strong>Duración:</strong> 90 minutos</li>
+                <li><strong>Precio:</strong> Gratuito / Simbólico</li>
+              </ul>
+              <p style={{ fontSize: '0.95rem', flex: 1 }}>Una sesión presencial donde sales habiendo creado algo con IA que creías imposible para ti. Sin instalar nada. Desde el móvil que ya tienes. Ideal para dar el primer paso.</p>
+              <Link href="/programas" className="btn btn-outline-dark" style={{ marginTop: '16px' }}>Reservar plaza &rarr;</Link>
+            </div>
+
+            <div className="reveal reveal-delay-1 glass-card card-light" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '16px', borderColor: 'var(--accent)', borderWidth: '2px', position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)' }}>
+                <span className="tag tag-dark" style={{ background: 'var(--bg-primary)' }}>MÁS POPULAR</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '8px' }}>
+                <Icon name="Layers" size={28} color="var(--bg-primary)" />
+                <h3 style={{ marginBottom: 0 }}>Programa Intensivo</h3>
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '12px 0', fontSize: '0.9rem', color: 'var(--text-dark-secondary)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><strong>Duración:</strong> 1 semana · 10 horas</li>
+                <li><strong>Precio:</strong> Desde 60€</li>
+              </ul>
+              <p style={{ fontSize: '0.95rem', flex: 1 }}>5 sesiones de 2 horas. Cada día un bloque completo con práctica real. Al final: un proyecto tuyo terminado. Para quien quiere ir en serio.</p>
+              <Link href="/programas" className="btn btn-primary" style={{ marginTop: '16px' }}>Ver programas &rarr;</Link>
+            </div>
+
+            <div className="reveal reveal-delay-2 glass-card card-light" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <span className="tag" style={{ background: 'transparent', border: '1px solid var(--accent)' }}>CONTINUIDAD</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '8px' }}>
+                <Icon name="Users" size={28} color="var(--accent-hover)" />
+                <h3 style={{ marginBottom: 0 }}>Comunidad Aether</h3>
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '12px 0', fontSize: '0.9rem', color: 'var(--text-dark-secondary)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><strong>Duración:</strong> Acceso mensual</li>
+                <li><strong>Precio:</strong> Baja mensualidad</li>
+              </ul>
+              <p style={{ fontSize: '0.95rem', flex: 1 }}>El espacio donde seguir. Novedades semanales, soporte, preguntas, recursos. Para no quedarte sola en el proceso. Para alumni del Intensivo.</p>
+              <Link href="/comunidad" className="btn btn-outline-dark" style={{ marginTop: '16px' }}>Saber más &rarr;</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══ TESTIMONIOS ═══ */}
-      <section className="section section-darker" style={{ position: "relative", overflow: "hidden" }}>
-        <div className="aurora-bg aurora-bg-alt" />
+      <section className="section section-dark" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="section-header reveal">
             <h2>Lo que dicen quienes <em>ya lo vivieron</em></h2>
           </div>
           <div className={`${styles.testimonialsGrid} reveal`}>
+            {/* Custom improved testimonial design implementation uses TestimonialCard */}
             <TestimonialCard
               image="/testimonio-1.png"
               name="Diana Martínez"
@@ -173,62 +288,83 @@ export default function Home() {
             <TestimonialCard
               image="/testimonio-2.png"
               name="Carmen López"
-              role="Profesora de Primaria"
-              quote="Pensaba que esto era solo para jóvenes o informáticos. Ahora uso la IA cada semana en clase y me ahorra horas de trabajo."
+              role="Mujer 50 años · Empodérate con IA"
+              quote="Pensaba que esto era solo para jóvenes o informáticos. Ahora uso la IA cada semana y me ahorra horas del día a día."
             />
             <TestimonialCard
               image="/testimonio-3.png"
               name="Roberto Fernández"
-              role="Hostelero, Barcelona"
+              role="Hostelero · Más tiempo para tu cocina"
               quote="Lo mejor es que en ningún momento me sentí perdido. Todo muy práctico y adaptado a lo que necesita alguien como yo."
             />
             <TestimonialCard
               image="/testimonio-1.png"
-              name="Marta Soler"
-              role="Abogada"
-              quote="La formación de Aether School es transformadora. He automatizado procesos que antes me llevaban todo el día."
+              name="Julián y Rosa"
+              role="Jubilados 70+ · Conéctate con el mundo"
+              quote="Pensábamos que esto nos venía grande. Al final aprendimos a pedirle recetas y trucos en dos tardes. La paciencia de los profesores es increíble."
             />
           </div>
         </div>
       </section>
 
-      {/* ═══ POR QUÉ AETHER SCHOOL ═══ */}
-      <section className="section section-dark" style={{ position: "relative", overflow: "hidden" }}>
+      {/* ═══ NO SOMOS OTRA ACADEMIA ═══ */}
+      <section className="section section-darker" style={{ position: "relative", overflow: "hidden" }}>
         <div className="aurora-bg" />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="section-header reveal">
-            <h2>No somos otra academia de <em>IA</em></h2>
+            <h2>La escuela que el sistema <em>nunca fue</em></h2>
+            <p>No somos un curso online de YouTube con certificado. Somos formadores que salen a la calle, van a tu barrio y enseñan a personas reales a usar IA para su vida real.</p>
           </div>
           <div className={`grid-3 ${styles.whyGrid}`}>
+
             <div className={`reveal glass-card ${styles.whyCard}`}>
               <div className={styles.whyIconWrapper}>
                 <Icon name="Target" size={32} color="var(--accent)" />
               </div>
               <h3>Para ti, no para todos</h3>
-              <p>
-                Cada programa está diseñado para una persona concreta. Tú no
-                eres un «usuario genérico».
-              </p>
+              <p>Cada programa está diseñado para una persona concreta con necesidades concretas. Tú no eres un usuario genérico. Una mujer de 50 años y un médico de guardia tienen problemas distintos. Nosotros también.</p>
             </div>
+
             <div className={`reveal reveal-delay-1 glass-card ${styles.whyCard}`}>
               <div className={styles.whyIconWrapper}>
                 <Icon name="Zap" size={32} color="var(--accent)" />
               </div>
               <h3>Nada de teoría. Todo práctico</h3>
-              <p>
-                Sales con algo hecho, no con apuntes. Desde el primer taller.
-              </p>
+              <p>La ciencia lo demuestra: aprendemos haciendo, no escuchando. El 90% de retención viene de la práctica inmediata. Por eso en Aether School sales con algo hecho, no con apuntes que olvidarás mañana.</p>
             </div>
+
             <div className={`reveal reveal-delay-2 glass-card ${styles.whyCard}`}>
               <div className={styles.whyIconWrapper}>
                 <Icon name="MapPin" size={32} color="var(--accent)" />
               </div>
               <h3>Lo llevamos a donde estás</h3>
-              <p>
-                Colaboramos con instituciones, fundaciones y centros para que la
-                formación llegue a ti.
-              </p>
+              <p>No tienes que desplazarte a un centro de formación. Nosotros llegamos a tu fundación, tu centro, tu empresa, tu barrio. La formación llega donde está la gente que más la necesita.</p>
             </div>
+
+            <div className={`reveal glass-card ${styles.whyCard}`}>
+              <div className={styles.whyIconWrapper}>
+                <Icon name="Microscope" size={32} color="var(--accent)" />
+              </div>
+              <h3>Respaldo científico real</h3>
+              <p>No enseñamos de oídas. Nuestra metodología está basada en meta-análisis de 350 estudios, en neuroplasticidad adulta documentada y en los datos del WEF sobre el futuro del trabajo. No vendemos humo.</p>
+            </div>
+
+            <div className={`reveal reveal-delay-1 glass-card ${styles.whyCard}`}>
+              <div className={styles.whyIconWrapper}>
+                <Icon name="Users" size={32} color="var(--accent)" />
+              </div>
+              <h3>Comunidad, no solo curso</h3>
+              <p>Al terminar el Intensivo, entras en la Comunidad Aether School. Un espacio de aprendizaje continuo donde recibirás novedades, soporte y conexión con personas en tu misma situación.</p>
+            </div>
+
+            <div className={`reveal reveal-delay-2 glass-card ${styles.whyCard}`}>
+              <div className={styles.whyIconWrapper}>
+                <Icon name="ShieldCheck" size={32} color="var(--accent)" />
+              </div>
+              <h3>Honestidad sobre la IA</h3>
+              <p>La IA no va a solucionar todos tus problemas ni va a sustituirte. Enseñamos lo que funciona de verdad, no lo que vende más.</p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -237,16 +373,21 @@ export default function Home() {
       <section className={`section section-light`}>
         <div className="container">
           <div className="section-header reveal">
-            <h2>¿Tienes una <em>fundación</em>, asociación o centro educativo?</h2>
+            <h2>¿Trabajas con personas que <em>necesitan este conocimiento?</em></h2>
             <p className={styles.instDesc}>
-              Diseñamos talleres y programas a medida para tu colectivo. Llevamos
-              la formación nosotros. Tú solo nos dices quiénes son y qué necesitan.
+              Colaboramos con fundaciones, asociaciones, ayuntamientos y centros educativos para llevar formación en IA a colectivos que normalmente quedan fuera. El programa se adapta a tu colectivo. Los formadores vamos nosotros. Tú pones el espacio y las personas.
             </p>
           </div>
-          <div style={{ textAlign: "center" }}>
+          <div className="reveal" style={{ textAlign: "center", marginBottom: '40px' }}>
             <Link href="/instituciones" className="btn btn-primary">
               Hablar con nosotros
             </Link>
+          </div>
+          <div className="reveal reveal-delay-2" style={{ display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap', opacity: 0.6, alignItems: 'center' }}>
+            <span style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-head)' }}>UAB</span>
+            <span style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-head)' }}>Colegio Virolai</span>
+            <span style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-head)' }}>Fundació Pere Tarrés</span>
+            <span style={{ fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-head)' }}>Ajuntament de Badalona</span>
           </div>
         </div>
       </section>

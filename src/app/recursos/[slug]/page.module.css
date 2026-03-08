@@ -1,0 +1,110 @@
+.articleHero {
+    padding: 120px 0 60px;
+    background: #0A0A0A;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.articleHero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 229, 255, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.category {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-light);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.title em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
+
+.contentSection {
+    padding: 60px 0 100px;
+    background: var(--bg-primary);
+}
+
+.contentWrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.contentWrapper p {
+    margin-bottom: 24px;
+    color: var(--text-muted);
+}
+
+.contentWrapper h2 {
+    font-size: 2rem;
+    color: var(--text-light);
+    margin: 48px 0 24px;
+    font-family: var(--font-head);
+}
+
+.contentWrapper ul,
+.contentWrapper ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+    color: var(--text-muted);
+}
+
+.contentWrapper li {
+    margin-bottom: 12px;
+}
+
+.contentWrapper blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: rgba(0, 229, 255, 0.05);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.contentWrapper :global(.cta-box) {
+    background: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 32px;
+    border-radius: 12px;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.contentWrapper :global(.cta-box p) {
+    margin-bottom: 0;
+    color: var(--text-light);
+}

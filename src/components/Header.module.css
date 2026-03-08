@@ -1,12 +1,59 @@
-.header {
+.topBanner {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    background: var(--accent-hover);
+    color: var(--bg-secondary);
+    text-align: center;
+    padding: 8px 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+}
+
+.topBanner a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.desktopBanner {
+    display: inline-block;
+}
+
+.mobileBanner {
+    display: none;
+}
+
+.closeBanner {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--bg-secondary);
+    cursor: pointer;
+}
+
+.header {
+    position: fixed;
+    top: 36px;
+    /* Offset para el banner */
     left: 0;
     right: 0;
     z-index: 1000;
     padding: 20px 0;
     transition: all 0.3s ease;
     background: transparent;
+}
+
+.headerNoBanner {
+    top: 0;
 }
 
 .header.scrolled {
@@ -131,5 +178,14 @@
     .navCta {
         margin-top: 12px;
         width: auto;
+    }
+
+    .desktopBanner {
+        display: none;
+    }
+
+    .mobileBanner {
+        display: inline-block;
+        font-size: 0.85rem;
     }
 }

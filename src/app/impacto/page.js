@@ -77,7 +77,7 @@ export default function Impacto() {
                 <div className="aurora-bg" />
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <span className="tag tag-dark reveal">Nuestro Impacto</span>
-                    <h1 className="reveal reveal-delay-1" style={{ fontSize: '3.5rem', marginBottom: '16px' }}>Los números detrás de <em>nuestra misión</em>.</h1>
+                    <h1 className="reveal reveal-delay-1" style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', marginBottom: '16px' }}>Los números detrás de <em>nuestra misión</em>.</h1>
                     <p className={`reveal reveal-delay-2 ${styles.heroSub}`} style={{ maxWidth: '800px', margin: '24px auto', fontSize: '1.25rem', color: 'var(--text-light)' }}>
                         No solo formamos personas. Formamos con base científica. Aquí están los datos que respaldan por qué esto importa.
                     </p>
@@ -93,27 +93,27 @@ export default function Impacto() {
                     </div>
                     <div className="grid-3" style={{ gap: '40px', marginTop: '60px' }}>
                         <div className="reveal">
-                            <div style={{ fontSize: '4rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>39%</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>39%</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>de las habilidades laborales actuales serán obsoletas antes de 2030 (WEF, 2025)</p>
                         </div>
                         <div className="reveal reveal-delay-1">
-                            <div style={{ fontSize: '4rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>63%</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>63%</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>de empleadores citan la brecha de habilidades como barrera principal (WEF, 2025)</p>
                         </div>
                         <div className="reveal reveal-delay-2">
-                            <div style={{ fontSize: '4rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>170M</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>170M</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>nuevos empleos se crearán. 92M se destruirán (WEF, 2025)</p>
                         </div>
                         <div className="reveal">
-                            <div style={{ fontSize: '4rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>78%</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>78%</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>de los empleadores esperan transformación total de su negocio por IA (WEF, 2025)</p>
                         </div>
                         <div className="reveal reveal-delay-1">
-                            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.2' }}>Brain Rot</div>
+                            <div style={{ fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1.2' }}>Brain Rot</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>Palabra del Año Oxford 2024. El deterioro cognitivo por pantallas es un fenómeno documentado.</p>
                         </div>
                         <div className="reveal reveal-delay-2">
-                            <div style={{ fontSize: '4rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>35,8%</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold', lineHeight: '1' }}>35,8%</div>
                             <p style={{ marginTop: '16px', color: 'var(--text-light)', fontSize: '1.05rem' }}>universitarios españoles trabajan en empleos de baja cualificación (Fundación CYD, 2024)</p>
                         </div>
                     </div>
@@ -211,27 +211,27 @@ export default function Impacto() {
                     </div>
                     <div className="grid-3" style={{ marginTop: '40px', gap: '24px' }}>
                         <div className="reveal glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>+400</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>+400</div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Personas formadas en IA</p>
                         </div>
                         <div className="reveal reveal-delay-1 glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>+40</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>+40</div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Talleres impartidos</p>
                         </div>
                         <div className="reveal reveal-delay-2 glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4</div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Ciudades</p>
                         </div>
                         <div className="reveal glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4.9<span style={{ fontSize: '2rem', color: 'var(--text-muted)' }}>/5</span></div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4.9<span style={{ fontSize: '2rem', color: 'var(--text-muted)' }}>/5</span></div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Valoración media</p>
                         </div>
                         <div className="reveal reveal-delay-1 glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>9</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>9</div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Programas especializados</p>
                         </div>
                         <div className="reveal reveal-delay-2 glass-card" style={{ padding: '32px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '3.5rem', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4</div>
+                            <div style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontFamily: 'var(--font-head)', color: 'var(--accent)', fontWeight: 'bold' }}>4</div>
                             <p style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginTop: '8px' }}>Instituciones colaboradoras</p>
                         </div>
                     </div>

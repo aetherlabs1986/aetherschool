@@ -119,7 +119,7 @@ export default function SobreNosotrosClient() {
                         <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
                             No somos otra academia.
                         </p>
-                        <h2 style={{ fontFamily: 'var(--font-head)', fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--accent)', margin: '40px 0 0 0' }}>
+                        <h2 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', fontWeight: 'bold', color: 'var(--accent)', margin: '40px 0 0 0' }}>
                             Somos la escuela que el sistema nunca fue.
                         </h2>
                     </div>
@@ -133,7 +133,7 @@ export default function SobreNosotrosClient() {
                     <div className={styles.heroSplit}>
                         <div className={styles.heroText}>
                             <span className="tag tag-dark reveal">Nuestra historia</span>
-                            <h1 className="reveal reveal-delay-1" style={{ fontSize: '3rem', marginBottom: '16px' }}>No somos una academia. Somos un <em>puente</em>.</h1>
+                            <h1 className="reveal reveal-delay-1" style={{ fontSize: 'clamp(2.2rem, 6vw, 3.5rem)', marginBottom: '16px' }}>No somos una academia. Somos un <em>puente</em>.</h1>
                             <p className="reveal reveal-delay-1" style={{ fontSize: '1.25rem', color: 'var(--text-light)', marginBottom: '32px' }}>
                                 Nació de una frustración. Creció de una convicción. Existe porque hay demasiada gente que se queda fuera.
                             </p>

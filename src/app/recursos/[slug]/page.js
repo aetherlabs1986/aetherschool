@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { articulos } from "../../../../data/articulos";
+import { articulos } from "../../../data/articulos";
 import * as LucideIcons from "lucide-react";
 import styles from "./page.module.css";
 

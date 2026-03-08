@@ -515,7 +515,7 @@ p {
 
 @media (max-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .section {
@@ -523,7 +523,7 @@ p {
   }
 
   .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .grid-2,
@@ -538,11 +538,17 @@ p {
   }
 
   h1 {
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(2rem, 7vw, 2.5rem);
   }
 
   h2 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
   }
 }
 

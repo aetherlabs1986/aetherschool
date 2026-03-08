@@ -1,0 +1,5 @@
+8b47f5c Fix mobile responsive issues: header overlap, font sizes, and stat pills
+7200752 Implement V2: Impact, Institutions, About Us, Resources (Blog), and Global UI elements
+7e7ad26 feat: visual refinements, expanded institutions reasons, and new Impacto page with case studies
+6bd5a7c feat: initial Aether School website - all pages and components
+70f52ef Initial commit from Create Next App

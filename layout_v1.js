@@ -4,11 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import ScrollObserver from "@/components/ScrollObserver";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -34,7 +33,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
       <body>
-        <ScrollObserver />
         <a href="#main-content" className="skip-link">
           Ir al contenido principal
         </a>

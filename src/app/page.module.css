@@ -11,8 +11,10 @@
 .heroSplit {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 .heroEyebrow {
@@ -21,10 +23,9 @@
 }
 
 .heroTitle {
-  font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--text-light);
+  color: var(--text-primary);
 }
 
 .heroSub {
@@ -44,8 +45,8 @@
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  aspect-ratio: 4/5;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
 .heroOverlay {
@@ -330,7 +331,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 160px;
+    padding-top: 130px;
     text-align: center;
   }
 

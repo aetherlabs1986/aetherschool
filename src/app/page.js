@@ -94,38 +94,21 @@ export default function Home() {
       </section>
 
       {/* ═══ EL MANIFIESTO ═══ */}
-      <section className="section section-light" style={{ background: '#FFFFFF', padding: '100px 0' }}>
+      <section className="section section-light" style={{ background: '#FFFFFF', padding: '60px 0' }}>
         <div className="container">
-          <div className="reveal" style={{ maxWidth: '680px' }}>
+          <div className="reveal" style={{ width: '100%' }}>
 
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', lineHeight: '1.2', color: '#1A1A2E', marginBottom: '24px', fontWeight: 'bold' }}>
-              Salimos del colegio sin saber qué se nos da bien.
-            </h2>
-
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: '#4A4A6A', marginBottom: '24px', lineHeight: '1.7' }}>
-              Sin saber cocinar, gestionar dinero, ni manejar el estrés. Con años de historia memorizada y cero horas de vida real.
+            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', marginBottom: '24px', lineHeight: '1.6' }}>
+              Salimos del colegio sin saber qué se nos da bien. Sin saber cocinar, gestionar dinero, ni manejar el estrés. Con años de historia memorizada y cero horas de vida real.
             </p>
 
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: '#4A4A6A', marginBottom: '40px', lineHeight: '1.7' }}>
-              El sistema no falló accidentalmente. Está diseñado para otro mundo, uno que ya no existe.
+            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', marginBottom: '24px', lineHeight: '1.6' }}>
+              El sistema no falló accidentalmente. Está diseñado para otro mundo, uno que ya no existe. Somos la primera generación que involuciona. No porque seamos peores, sino porque nadie nos está preparando para lo que viene.
             </p>
 
-            <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: '#1A1A2E', marginBottom: '20px', fontWeight: 'bold' }}>
-              Somos la primera generación que involuciona.
-            </h3>
-
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: '#4A4A6A', marginBottom: '40px', lineHeight: '1.7' }}>
-              No porque seamos peores, sino porque nadie nos está preparando para lo que viene.
+            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', margin: 0, lineHeight: '1.6' }}>
+              Aether School existe para cambiar eso. No somos otra academia.
             </p>
-
-            <div style={{ paddingLeft: '20px', borderLeft: '3px solid var(--accent)' }}>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: '#1A1A2E', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '700', margin: 0 }}>
-                Aether School existe para cambiar eso.
-              </p>
-              <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: '#1A1A2E', margin: '8px 0 0 0', fontWeight: 'bold' }}>
-                No somos otra academia.
-              </p>
-            </div>
 
           </div>
         </div>

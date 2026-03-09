@@ -93,27 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ EL MANIFIESTO ═══ */}
-      <section className="section section-light" style={{ background: '#FFFFFF', padding: '60px 0' }}>
-        <div className="container">
-          <div className="reveal" style={{ width: '100%' }}>
-
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', marginBottom: '24px', lineHeight: '1.6' }}>
-              Salimos del colegio sin saber qué se nos da bien. Sin saber cocinar, gestionar dinero, ni manejar el estrés. Con años de historia memorizada y cero horas de vida real.
-            </p>
-
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', marginBottom: '24px', lineHeight: '1.6' }}>
-              El sistema no falló accidentalmente. Está diseñado para otro mundo, uno que ya no existe. Somos la primera generación que involuciona. No porque seamos peores, sino porque nadie nos está preparando para lo que viene.
-            </p>
-
-            <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', color: '#1A1A2E', margin: 0, lineHeight: '1.6' }}>
-              Aether School existe para cambiar eso. No somos otra academia.
-            </p>
-
-          </div>
-        </div>
-      </section>
-
       {/* ═══ EL PROBLEMA ═══ */}
       <section className="section section-light">
         <div className="container">

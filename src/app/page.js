@@ -24,7 +24,6 @@ export default function Home() {
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className={styles.heroSplit}>
             <div className={styles.heroText}>
-              <span className={`tag tag-dark reveal ${styles.heroEyebrow}`}>FORMACIÓN EN IA · BARCELONA</span>
               <h1 className={`reveal reveal-delay-1 ${styles.heroTitle}`}>
                 La IA para las personas que el sistema olvidó.
               </h1>

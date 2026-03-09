@@ -7,7 +7,6 @@ import styles from "./Header.module.css";
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [bannerVisible, setBannerVisible] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -17,14 +16,7 @@ export default function Header() {
 
     return (
         <>
-            {bannerVisible && (
-                <div className={styles.topBanner}>
-                    <span className={styles.desktopBanner}>🎓 Próximo taller Empodérate con IA — Badalona · Plazas limitadas · <a href="https://wa.me/34627281459" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp &rarr;</a></span>
-                    <span className={styles.mobileBanner}>Próximo taller Badalona · <a href="https://wa.me/34627281459" target="_blank" rel="noopener noreferrer">WhatsApp &rarr;</a></span>
-                    <button className={styles.closeBanner} onClick={() => setBannerVisible(false)} aria-label="Cerrar banner">&times;</button>
-                </div>
-            )}
-            <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${!bannerVisible ? styles.headerNoBanner : ""}`}>
+            <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
                 <div className={`container ${styles.headerInner}`}>
                     <Link href="/" className={styles.logo} aria-label="Aether School - Inicio">
                         <Image

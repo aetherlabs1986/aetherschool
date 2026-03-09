@@ -49,16 +49,16 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.8), rgba(0, 27, 46, 0.3));
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.8), rgba(15, 23, 34, 0.4));
   pointer-events: none;
 }
 
 /* ═══ STATS ═══ */
 .statsSection {
-  background-color: #001B2E;
+  background-color: var(--bg-primary);
   padding: 60px 0 40px;
   position: relative;
-  border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .statsGrid {

@@ -88,43 +88,7 @@ export default function SobreNosotrosClient() {
 
     return (
         <>
-            {/* ═══ EL MANIFIESTO ═══ */}
-            <section className="section section-darker" style={{ background: '#0A0A0A', paddingTop: '120px', paddingBottom: '120px', textAlign: 'center' }}>
-                <div className="container">
-                    <div className="reveal" style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Salimos del colegio sin saber qué se nos da bien.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Sin saber cocinar, gestionar dinero, ni manejar el estrés.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Con años de historia memorizada y cero horas de vida real.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            El sistema no falló accidentalmente.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Está diseñado para otro mundo, uno que ya no existe.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Somos la primera generación que involuciona.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            No porque seamos peores, sino porque nadie nos está preparando para lo que viene.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            Aether School existe para cambiar eso.
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-light)', margin: 0 }}>
-                            No somos otra academia.
-                        </p>
-                        <h2 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', fontWeight: 'bold', color: 'var(--accent)', margin: '40px 0 0 0' }}>
-                            Somos la escuela que el sistema nunca fue.
-                        </h2>
-                    </div>
-                </div>
-            </section>
+
 
             {/* ═══ HERO - STORY + IMAGE ═══ */}
             <section className={styles.hero} style={{ position: "relative", overflow: "hidden" }}>
